@@ -1,0 +1,19 @@
+/* 图形角色样式；参数来自 design-tokens.json。独立 SVG 内嵌其所需变量。 */
+svg.hn-chart { color:var(--ink); background:var(--figure-surface); }
+svg.hn-chart .hnc-title { font:400 var(--chart-title-size) var(--component-title); fill:var(--ink); }
+svg.hn-chart .hnc-label { font:400 var(--chart-label-size) var(--component-body); fill:var(--ink); }
+svg.hn-chart .hnc-note { font:400 var(--chart-note-size) var(--component-body); fill:var(--muted); }
+svg.hn-chart .hnc-number { font:400 var(--chart-number-size) var(--num); fill:var(--ink); }
+svg.hn-chart .hnc-major { stroke:var(--ink); stroke-opacity:var(--grid-major-opacity); stroke-width:var(--grid-major-width); }
+svg.hn-chart .hnc-minor { stroke:var(--ink); stroke-opacity:var(--grid-minor-opacity); stroke-width:var(--grid-minor-width); }
+svg.hn-chart .hnc-baseline { stroke:var(--ink); stroke-opacity:var(--baseline-opacity); stroke-width:var(--baseline-width); }
+svg.hn-chart .hnc-node { fill:var(--node-fill); stroke:var(--line); stroke-width:var(--node-stroke-width); }
+svg.hn-chart .hnc-emphasis { fill:var(--emphasis-fill); stroke:var(--accent); stroke-width:var(--node-stroke-width); }
+svg.hn-chart .hnc-edge { fill:none; stroke:var(--muted); stroke-width:var(--edge-stroke-width); }
+.hn-chart-scroll { overflow:auto; max-width:100%; }
+.hn-chart-scroll > svg.hn-chart { display:block; max-width:none; flex:none; }
+/* HNC FLOW SHAPES: opt-in; geometry and labels follow explicit data. */
+svg.hn-chart .hnc-node-number { font:400 var(--chart-number-size) var(--num); fill:var(--muted); }
+svg.hn-chart .hnc-terminal-kind { font:400 var(--chart-label-size) var(--component-body); fill:var(--muted); }
+svg.hn-chart .hnc-terminal-end { stroke-width:var(--figure-edge-width); }
+svg.hn-chart .hnc-junction { fill:var(--muted); stroke:var(--figure-surface); stroke-width:var(--border-width); }

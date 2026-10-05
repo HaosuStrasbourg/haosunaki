@@ -1,0 +1,542 @@
+{
+  "schema_version": 1,
+  "scope": "Official source index only; no third-party chart assets distributed.",
+  "examples": [
+    {
+      "id": "bar-anatomy",
+      "name": "柱形图构成",
+      "group": "comparison",
+      "condition": "展示类别、从零起的数量尺度与标记关系；教学标注不是每张柱图必备。",
+      "official_url": "https://developer.apple.com/documentation/charts/creating-a-chart-using-swift-charts",
+      "publisher": "Apple"
+    },
+    {
+      "id": "bar-categories",
+      "name": "平等类别柱形",
+      "group": "comparison",
+      "condition": "类别身份稳定，量值从零起；未给出的业务单位不能补造。",
+      "official_url": "https://charts.carbondesignsystem.com/bar",
+      "publisher": "IBM Carbon"
+    },
+    {
+      "id": "slope",
+      "name": "斜率图",
+      "group": "comparison",
+      "condition": "比较同一对象两端变化；两端口径一致，不把线段当连续时间轨迹。",
+      "official_url": "https://vega.github.io/vega-lite/examples/line_slope.html",
+      "publisher": "Vega-Lite"
+    },
+    {
+      "id": "dumbbell",
+      "name": "哑铃图",
+      "group": "comparison",
+      "condition": "同一行比较两个数值与差距；保留端点语义和共同尺度。",
+      "official_url": "https://vega.github.io/vega-lite/examples/layer_ranged_dot.html",
+      "publisher": "Vega-Lite"
+    },
+    {
+      "id": "bullet",
+      "name": "目标子弹图",
+      "group": "comparison",
+      "condition": "实际值、目标与背景区间分别编码；不同指标保留独立单位和轴。",
+      "official_url": "https://www.highcharts.com/demo/highcharts/bullet-graph",
+      "publisher": "Highcharts / Highsoft"
+    },
+    {
+      "id": "deviation",
+      "name": "正负偏差柱形",
+      "group": "comparison",
+      "condition": "本例参照真实零；正负不自动等于好坏或金融涨跌。",
+      "official_url": "https://vega.github.io/vega-lite/examples/bar_negative.html",
+      "publisher": "Vega-Lite"
+    },
+    {
+      "id": "bump",
+      "name": "排名变化",
+      "group": "comparison",
+      "condition": "名次与量值分开；保留并列排名、名次空缺和稳定对象身份。",
+      "official_url": "https://vega.github.io/vega-lite/examples/window_rank.html",
+      "publisher": "Vega-Lite"
+    },
+    {
+      "id": "line",
+      "name": "时间折线",
+      "group": "change",
+      "condition": "按真实日期间隔定位；缺失断线、真实零值与末点标签分别保留。",
+      "official_url": "https://charts.carbondesignsystem.com/line",
+      "publisher": "IBM Carbon"
+    },
+    {
+      "id": "calendar",
+      "name": "日历热图",
+      "group": "change",
+      "condition": "记录日期与缺失分开；本例红涨绿跌、±6% 截色，首条初始化零不是实际零回报。",
+      "official_url": "https://vega.github.io/vega/examples/calendar-view/",
+      "publisher": "Vega"
+    },
+    {
+      "id": "candlestick",
+      "name": "OHLC 蜡烛图",
+      "group": "change",
+      "condition": "保留开高低收与真实日期；本例红绿比较当期开收，不是前日收盘。",
+      "official_url": "https://vega.github.io/vega-lite/examples/layer_candlestick.html",
+      "publisher": "Vega-Lite"
+    },
+    {
+      "id": "streamgraph",
+      "name": "溪流图",
+      "group": "change",
+      "condition": "读色带厚度；居中堆叠没有各类共同零基线，不用上下位置代表绝对量。",
+      "official_url": "https://vega.github.io/vega-lite/examples/stacked_area_stream.html",
+      "publisher": "Vega-Lite"
+    },
+    {
+      "id": "horizon",
+      "name": "地平线图",
+      "group": "change",
+      "condition": "颜色层级与层内高度共同编码；本例仅确认正值两层，未确认负值折叠。",
+      "official_url": "https://vega.github.io/vega/examples/horizon-graph/",
+      "publisher": "Vega"
+    },
+    {
+      "id": "histogram",
+      "name": "直方图",
+      "group": "distribution",
+      "condition": "分箱边界、宽度与计数口径不可省；空箱不等于数据缺失。",
+      "official_url": "https://vega.github.io/vega-lite/examples/bar_binned_data.html",
+      "publisher": "Vega-Lite"
+    },
+    {
+      "id": "boxplot",
+      "name": "箱线图",
+      "group": "distribution",
+      "condition": "箱体为四分位区间，须端为 1.5 IQR 范围内实际观测，保留离群点；不是置信区间。",
+      "official_url": "https://vega.github.io/vega-lite/examples/boxplot_2D_vertical.html",
+      "publisher": "Vega-Lite"
+    },
+    {
+      "id": "ecdf",
+      "name": "经验累积分布",
+      "group": "distribution",
+      "condition": "保留来源变换与缺失处理；本例有缺失值分母陷阱，不直接作为标准观测 ECDF 算法。",
+      "official_url": "https://altair-viz.github.io/gallery/empirical_cumulative_distribution_function.html",
+      "publisher": "Vega-Altair"
+    },
+    {
+      "id": "density",
+      "name": "概率密度",
+      "group": "distribution",
+      "condition": "正态拟合、KDE 和 500 条 rug 观测同时保留；带宽 0 代表自动选择。",
+      "official_url": "https://vega.github.io/vega/examples/probability-density/",
+      "publisher": "Vega / Vega-Lite official example gallery"
+    },
+    {
+      "id": "violin",
+      "name": "小提琴图",
+      "group": "distribution",
+      "condition": "密度厚度不代表样本数；保留共用密度尺度、中位数、IQR 及截尾边界。",
+      "official_url": "https://vega.github.io/vega/examples/violin-plot/",
+      "publisher": "Vega"
+    },
+    {
+      "id": "ridgeline",
+      "name": "山脊图",
+      "group": "distribution",
+      "condition": "本例为月度温度分箱计数，不是 KDE；冷暖色表示月均温，颜色中点不是阈值。",
+      "official_url": "https://altair-viz.github.io/gallery/ridgeline_plot.html",
+      "publisher": "Vega-Altair"
+    },
+    {
+      "id": "dotplot",
+      "name": "点堆叠图",
+      "group": "distribution",
+      "condition": "保留平滑堆叠与固定分箱两个面板；同 48 条观测重复显示，不是 96 个样本。",
+      "official_url": "https://vega.github.io/vega/examples/dot-plot/",
+      "publisher": "Vega"
+    },
+    {
+      "id": "beeswarm",
+      "name": "分组点群",
+      "group": "distribution",
+      "condition": "本例为类别力布局；位置是聚组避让，不是量值、距离或自动社群识别。",
+      "official_url": "https://vega.github.io/vega/examples/beeswarm-plot/",
+      "publisher": "Vega"
+    },
+    {
+      "id": "qq",
+      "name": "Q–Q 对照",
+      "group": "distribution",
+      "condition": "两个理论分布面板完整保留；近似直线不自动构成正态性检验通过。",
+      "official_url": "https://vega.github.io/vega/examples/quantile-quantile-plot/",
+      "publisher": "Vega"
+    },
+    {
+      "id": "scatter",
+      "name": "散点图",
+      "group": "association",
+      "condition": "位置编码两个数值；类别、透明度与标签不改变样本和尺度。",
+      "official_url": "https://charts.carbondesignsystem.com/scatter",
+      "publisher": "IBM Carbon Charts"
+    },
+    {
+      "id": "heatmap",
+      "name": "一般热力矩阵",
+      "group": "association",
+      "condition": "完整行列与共同色阶；缺失斜纹、真实零值和格内数值分别表达。",
+      "official_url": "https://charts.carbondesignsystem.com/heatmap",
+      "publisher": "IBM Carbon"
+    },
+    {
+      "id": "scattermatrix",
+      "name": "散点矩阵",
+      "group": "association",
+      "condition": "保留 4×4 全部变量配对；同 342 个样本重复展示，不把 5,472 个点当独立样本。",
+      "official_url": "https://vega.github.io/vega/examples/brushing-scatter-plots/",
+      "publisher": "Vega"
+    },
+    {
+      "id": "parallel",
+      "name": "平行坐标",
+      "group": "association",
+      "condition": "各轴尺度独立且方向明确；交叉不等于相关系数，保留 392 条记录与 7 轴。",
+      "official_url": "https://vega.github.io/vega/examples/parallel-coordinates/",
+      "publisher": "Vega"
+    },
+    {
+      "id": "correlation",
+      "name": "相关系数矩阵",
+      "group": "association",
+      "condition": "Pearson 含义、真实零中心及上三角遮罩明确；325 对不等于 676 个独立关系。",
+      "official_url": "https://seaborn.pydata.org/examples/many_pairwise_correlations.html",
+      "publisher": "seaborn"
+    },
+    {
+      "id": "contour",
+      "name": "等高线",
+      "group": "association",
+      "condition": "连续数值场、阈值及原轮廓保持；本例色阶中点只为过渡，不表示零或业务界限。",
+      "official_url": "https://vega.github.io/vega/examples/volcano-contours/",
+      "publisher": "Vega / Vega-Lite official example gallery"
+    },
+    {
+      "id": "stacked",
+      "name": "堆叠柱形",
+      "group": "composition",
+      "condition": "总量与分项共用尺度；只有贴基线的分项可直接比较长度起点。",
+      "official_url": "https://charts.carbondesignsystem.com/bar",
+      "publisher": "IBM Carbon Charts"
+    },
+    {
+      "id": "normalized",
+      "name": "百分比堆叠",
+      "group": "composition",
+      "condition": "在每个年龄组内归一化；占比相同不表示总人数相同。",
+      "official_url": "https://vega.github.io/vega-lite/examples/stacked_bar_normalize.html",
+      "publisher": "Vega-Lite official gallery"
+    },
+    {
+      "id": "waterfall",
+      "name": "瀑布图",
+      "group": "composition",
+      "condition": "区分期初、增减和期末，保持累积闭合；颜色沿用该例语义，不冒充金融惯例。",
+      "official_url": "https://vega.github.io/vega-lite/examples/waterfall_chart.html",
+      "publisher": "Vega-Lite official gallery"
+    },
+    {
+      "id": "funnel",
+      "name": "阶段漏斗",
+      "group": "composition",
+      "condition": "该例是官网阶段演示；真实转化需验证同 cohort、观察窗和嵌套，不按外形宽度精确读人数。",
+      "official_url": "https://www.highcharts.com/demo/highcharts/funnel",
+      "publisher": "Highcharts / Highsoft"
+    },
+    {
+      "id": "treemap",
+      "name": "矩形树图",
+      "group": "composition",
+      "condition": "面积表示可加总量，矩形嵌套表示层级；保留小分支，不将父子重复累计。",
+      "official_url": "https://charts.carbondesignsystem.com/treemap",
+      "publisher": "IBM Carbon Charts"
+    },
+    {
+      "id": "sunburst",
+      "name": "旭日图",
+      "group": "composition",
+      "condition": "角度按分支总量、圆环按深度；完整名称索引保留，不跨深度直接比面积。",
+      "official_url": "https://vega.github.io/vega/examples/sunburst/",
+      "publisher": "Vega"
+    },
+    {
+      "id": "mosaic",
+      "name": "马赛克图",
+      "group": "composition",
+      "condition": "宽度为组总数、组内高度为条件占比、面积为全体占比；透明度沿源例表示汽缸数。",
+      "official_url": "https://altair-viz.github.io/gallery/mosaic_with_labels.html",
+      "publisher": "Altair"
+    },
+    {
+      "id": "ternary",
+      "name": "三元图",
+      "group": "composition",
+      "condition": "三项非负且合计整体；本例 10 座虚构城市，点大小带非零起点，面积比不等于总量比。",
+      "official_url": "https://vega.github.io/vega-lite/examples/ternary.html",
+      "publisher": "Vega-Lite"
+    },
+    {
+      "id": "interval",
+      "name": "误差线机制示意",
+      "group": "uncertainty",
+      "condition": "仅确认 9 点与 9 条示意误差线的层级；来源未定义统计区间，不能称 CI 或 SD。",
+      "official_url": "https://claude.dev/blog/automating-eval-design-and-hillclimbing/",
+      "publisher": "Claude"
+    },
+    {
+      "id": "errorbar",
+      "name": "均值与标准误",
+      "group": "uncertainty",
+      "condition": "当前选态为均值 ± 标准误，不是 SD 或 95% CI；保留全部品种与排序。",
+      "official_url": "https://vega.github.io/vega/examples/error-bars/",
+      "publisher": "Vega / Vega-Lite official example gallery"
+    },
+    {
+      "id": "band",
+      "name": "均值置信带",
+      "group": "uncertainty",
+      "condition": "年度均值的 95% bootstrap CI；不是 95% 个体覆盖范围或单体预测区间。",
+      "official_url": "https://vega.github.io/vega-lite/examples/layer_line_errorband_ci.html",
+      "publisher": "Vega / Vega-Lite official example gallery"
+    },
+    {
+      "id": "quantiledot",
+      "name": "等概率点图",
+      "group": "uncertainty",
+      "condition": "每点表示模型概率质量，不是实际车次；精确阈值概率与分箱着色近似分别说明。",
+      "official_url": "https://vega.github.io/vega/examples/quantile-dot-plot/",
+      "publisher": "Vega"
+    },
+    {
+      "id": "sensitivity",
+      "name": "Sobol 敏感性",
+      "group": "uncertainty",
+      "condition": "限定模型、输入分布与一阶／总效应；本例复用公开估计值，不声称独立重跑估计。",
+      "official_url": "https://openturns.github.io/openturns/latest/auto_sensitivity_analysis/plot_functional_chaos_sensitivity.html",
+      "publisher": "OpenTURNS 1.27 official documentation"
+    },
+    {
+      "id": "cost-performance",
+      "name": "成本与效果路径",
+      "group": "uncertainty",
+      "condition": "横轴为对数成本，路径为采用顺序；两个约 1¢ 值保持近似标记，不称时间趋势。",
+      "official_url": "https://claude.dev/blog/automating-eval-design-and-hillclimbing/",
+      "publisher": "Claude"
+    },
+    {
+      "id": "choropleth",
+      "name": "分级设色地图",
+      "group": "spatial",
+      "condition": "人口密度与总量分开；保留对数色阶、插图位置及缺失区域说明。",
+      "official_url": "https://www.highcharts.com/demo/maps/color-axis",
+      "publisher": "Highcharts / Highsoft"
+    },
+    {
+      "id": "bubblemap",
+      "name": "气泡地图",
+      "group": "spatial",
+      "condition": "重绘圆面积与人口总量成正比；191 个可见圆之外的 24 条记录保留在注记。",
+      "official_url": "https://www.highcharts.com/demo/maps/map-bubble",
+      "publisher": "Highcharts / Highsoft"
+    },
+    {
+      "id": "flow",
+      "name": "条件工作流",
+      "group": "mechanism",
+      "condition": "步骤、门禁与分支条件完整；箭头表示流程方向，非所有关系都应加箭头。",
+      "official_url": "https://www.anthropic.com/engineering/building-effective-agents#workflow-prompt-chaining",
+      "publisher": "Anthropic"
+    },
+    {
+      "id": "architecture",
+      "name": "架构与作用域",
+      "group": "mechanism",
+      "condition": "保留宿主／客户端／服务端及组边界；包含关系与通信关系分别表示。",
+      "official_url": "https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture#participants",
+      "publisher": "Model Context Protocol official documentation"
+    },
+    {
+      "id": "sequence",
+      "name": "消息时序",
+      "group": "mechanism",
+      "condition": "参与方、消息方向、注释及次序完整；纵向先后不是未经声明的实际耗时。",
+      "official_url": "https://modelcontextprotocol.io/specification/2025-06-18/client/sampling",
+      "publisher": null
+    },
+    {
+      "id": "network",
+      "name": "一般关系网络",
+      "group": "mechanism",
+      "condition": "本例 5 条无权无向边；布局距离、颜色与节点大小不补造权重或社群。",
+      "official_url": "https://www.highcharts.com/blog/tutorials/network-graph/",
+      "publisher": "Highcharts official tutorial (author Mustapha Mekhatria)"
+    },
+    {
+      "id": "sankey",
+      "name": "加权流向",
+      "group": "mechanism",
+      "condition": "同一流量单位，节点与 9 条边守恒；间距不编码量值，也不自动证明因果。",
+      "official_url": "https://charts.carbondesignsystem.com/alluvial",
+      "publisher": "IBM Carbon Charts"
+    },
+    {
+      "id": "gantt",
+      "name": "甘特排期",
+      "group": "mechanism",
+      "condition": "保留开始、持续时间与接续；本例日历日，结束边界不额外加一天。",
+      "official_url": "https://mermaid.js.org/syntax/gantt.html",
+      "publisher": "Mermaid official documentation"
+    },
+    {
+      "id": "swimlane",
+      "name": "责任泳道",
+      "group": "mechanism",
+      "condition": "角色分工与返程交接完整；当前例不是 BPMN，不擅增网关或消息事件。",
+      "official_url": "https://mermaid.js.org/syntax/swimlanes.html#basic-example",
+      "publisher": "Mermaid official documentation"
+    },
+    {
+      "id": "state",
+      "name": "复合状态图",
+      "group": "mechanism",
+      "condition": "Review 分组及内部初始点保留；Decision 是原例普通状态，非选择菱形。",
+      "official_url": "https://mermaid.js.org/syntax/stateDiagram.html#with-the-defaults",
+      "publisher": "Mermaid official documentation"
+    },
+    {
+      "id": "er",
+      "name": "实体关系图",
+      "group": "mechanism",
+      "condition": "字段、复合主键、端点基数与注释完整；不能据示意声称可生成生产数据库。",
+      "official_url": "https://mermaid.js.org/syntax/entityRelationshipDiagram.html#attribute-keys-and-comments",
+      "publisher": "Mermaid official documentation"
+    },
+    {
+      "id": "radialtree",
+      "name": "径向树",
+      "group": "mechanism",
+      "condition": "修正版直接显示 252 个完整名称与 251 条父子边；需原尺寸查看，不改编号压缩。",
+      "official_url": "https://vega.github.io/vega/examples/radial-tree-layout/",
+      "publisher": "Vega"
+    },
+    {
+      "id": "arc",
+      "name": "弧线关系图",
+      "group": "mechanism",
+      "condition": "保留 77 个人名和 254 条无向边；跨度来自输入顺序，不是关系强度或距离。",
+      "official_url": "https://vega.github.io/vega/examples/arc-diagram/",
+      "publisher": "Vega"
+    },
+    {
+      "id": "confusion",
+      "name": "混淆矩阵",
+      "group": "model-evaluation",
+      "condition": "计数和按真实类别归一化两面板完整；行是真实、列是预测，不能互换分母。",
+      "official_url": "https://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html",
+      "publisher": "scikit-learn developers"
+    },
+    {
+      "id": "roc",
+      "name": "ROC 曲线",
+      "group": "model-evaluation",
+      "condition": "108 个点、FPR／TPR 和对角机会线；该例是训练集回代评估，不冒称外部泛化。",
+      "official_url": "https://plotly.com/python/roc-and-pr-curves/#basic-binary-roc-curve",
+      "publisher": "Plotly"
+    },
+    {
+      "id": "pr",
+      "name": "Precision–Recall",
+      "group": "model-evaluation",
+      "condition": "501 点与正类占比机会基准保留；PR 梯形 AUC 与 AP 分别标识，原对角线不称机会线。",
+      "official_url": "https://plotly.com/python/roc-and-pr-curves/#precision-recall-curves",
+      "publisher": "Plotly"
+    },
+    {
+      "id": "calibration",
+      "name": "校准曲线",
+      "group": "model-evaluation",
+      "condition": "10 个等宽箱，横轴箱内平均概率、纵轴正例比例；本例无 CI。",
+      "official_url": "https://classifier-calibration.github.io/PyCalib/examples/xmpl_reliability_diagram.html",
+      "publisher": "PyCalib"
+    },
+    {
+      "id": "learning",
+      "name": "学习曲线",
+      "group": "model-evaluation",
+      "condition": "授权选取 GaussianNB 独立面板；5 个样本量、训练／验证两线及 ±1 SD，不是 50 折或 95% CI。",
+      "official_url": "https://scikit-learn.org/stable/auto_examples/model_selection/plot_learning_curve.html",
+      "publisher": "scikit-learn"
+    },
+    {
+      "id": "residual",
+      "name": "回归残差",
+      "group": "model-evaluation",
+      "condition": "150 点、2 条 OLS 与 2 个边际小提琴完整；本例残差为 prediction − actual（cm）。",
+      "official_url": "https://plotly.com/python/ml-regression/#residual-plots",
+      "publisher": "Plotly"
+    },
+    {
+      "id": "cohort",
+      "name": "Cohort 留存矩阵",
+      "group": "longitudinal",
+      "condition": "分母为同 cohort 第 0 周用户；120 格观察值与 105 格未到观察期分开，不填零。",
+      "official_url": "https://observablehq.com/@observablehq/user-retention",
+      "publisher": "Observable"
+    },
+    {
+      "id": "survival",
+      "name": "Kaplan–Meier 生存",
+      "group": "longitudinal",
+      "condition": "右连续阶梯、删失记号、事前风险人数与 95% 点态 Greenwood log-log CI 完整。",
+      "official_url": "https://lifelines.readthedocs.io/en/latest/Quickstart.html#multiple-groups",
+      "publisher": "lifelines"
+    },
+    {
+      "id": "eventstudy",
+      "name": "事件研究",
+      "group": "longitudinal",
+      "condition": "29 个系数及 95% 点态区间；year 14 是固定参考，year 15 为事件期 0，不凭图断言因果或联合检验。",
+      "official_url": "https://pyfixest.org/tutorials/difference-in-differences.html#one-shot-adoption-static-and-dynamic-specifications",
+      "publisher": "PyFixest"
+    },
+    {
+      "id": "causal-dag",
+      "name": "因果假说图",
+      "group": "mechanism",
+      "condition": "4 个变量与 4 条有向边属于教学模型假设；U 为未观测共同原因，颜色不表示证据强度或效应大小。",
+      "official_url": "https://www.pywhy.org/dowhy/v0.14/example_notebooks/dowhy-simple-iv-example.html",
+      "publisher": "DoWhy"
+    },
+    {
+      "id": "feedback-loops",
+      "name": "反馈回路图",
+      "group": "mechanism",
+      "condition": "5 个变量、6 条唯一因果边；两个分面属于同一模型。正负是影响极性，R/B 不表示好坏、强度或稳定保证。",
+      "official_url": "https://ocw.mit.edu/courses/esd-36-system-project-management-fall-2012/800ceb204ef03177b61e1288533446c1_MITESD_36F12_Lec06.pdf#page=47",
+      "publisher": "MIT OpenCourseWare"
+    },
+    {
+      "id": "permission-matrix",
+      "name": "权限矩阵",
+      "group": "mechanism",
+      "condition": "完整安全功能子表 8×5；No 是不具备而非显式 Deny，保留自有提交与无列表访问的 secret scanning 限定。",
+      "official_url": "https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization#access-requirements-for-security-features",
+      "publisher": "GitHub Docs"
+    },
+    {
+      "id": "bpmn-collaboration",
+      "name": "BPMN 协作图",
+      "group": "mechanism",
+      "condition": "2 个池、11 个节点、11 条顺序流与 6 条消息流；事件型网关不是是非判断，未做 BPMN 引擎或 XML 执行校验。",
+      "official_url": "https://camunda.com/bpmn/reference/#pool",
+      "publisher": "Camunda"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "HaosuNaki 阅读、作图与插画"
+  short_description: "研究优先：阅读排版、数据与机制图；正文采用细线插画，封面采用纸感拼贴"
+  default_prompt: "用 $haosunaki 将以下材料做成可视化研究解释，区分观测证据、机制假说与情景计算，按问题选图；需要配图时，正文用细线插画、封面用纸感拼贴。"

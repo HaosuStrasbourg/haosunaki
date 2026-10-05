@@ -1,0 +1,40 @@
+/* HaosuNaki v1.2 · 阅读页方框连线图。默认值为工作建议，可按内容调整。 */
+.hn-diagram{--hn-paper:#FAF8F4;--hn-surface:#EFECE6;--hn-ink:#282623;--hn-muted:#68635D;--hn-cobalt:#244AC7;--hn-coral:#C45C46;--hn-berry:#A33C62;--hn-lake:#2E7F9E;--hn-lavender:#7668A6;--hn-tea:#765B50;margin:32px 0 0;min-width:0;max-width:100%;color:var(--hn-ink)}
+.hn-diagram>h3{margin:0 0 8px;font-family:"IBM Plex Mono","Songti SC","Noto Serif SC","Source Han Serif SC",serif;font-size:22px;line-height:32px;font-weight:400}
+.hn-diagram>.hn-diagram-description{margin:0 0 16px;font-size:16px;line-height:28px;color:var(--hn-muted)}
+.hn-diagram-canvas{position:relative;max-width:100%;min-width:0;overflow-x:auto;overflow-y:hidden;background:var(--hn-paper);overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+.hn-diagram-canvas:focus-visible{outline:2px solid var(--hn-cobalt);outline-offset:4px}
+.hn-diagram-stage{position:relative;isolation:isolate;flex:none;margin-inline:auto;background:var(--hn-paper);font:400 16px/26px "JetBrains Mono","PingFang SC","Noto Sans SC","Source Han Sans SC",sans-serif}
+.hn-diagram-stage *{box-sizing:border-box}
+.hn-diagram-node{position:absolute;z-index:3;min-height:64px;padding:16px 18px;border:2px solid var(--hn-muted);border-radius:8px;background:var(--hn-surface);color:var(--hn-ink);text-align:center;overflow-wrap:anywhere;word-break:normal;white-space:pre-line;font:inherit}
+.hn-diagram-node[data-type="external"]{border-style:dashed;background:var(--hn-paper)}
+.hn-diagram-node[data-focus="true"]{border-color:var(--hn-cobalt);background:var(--hn-paper)}
+.hn-diagram-node[data-focus="true"] .hn-diagram-node-label{color:var(--hn-cobalt);font-weight:500}
+.hn-diagram-node[data-color="cobalt"]{border-color:var(--hn-cobalt);background:var(--hn-paper)}
+.hn-diagram-node[data-color="coral"]{border-color:var(--hn-coral);background:var(--hn-paper)}
+.hn-diagram-node[data-color="berry"]{border-color:var(--hn-berry);background:var(--hn-paper)}
+.hn-diagram-node[data-color="lake"]{border-color:var(--hn-lake);background:var(--hn-paper)}
+.hn-diagram-node[data-color="lavender"]{border-color:var(--hn-lavender);background:var(--hn-paper)}
+.hn-diagram-node[data-color="tea"]{border-color:var(--hn-tea);background:var(--hn-paper)}
+.hn-diagram-node-tag{display:block;margin-bottom:4px;color:var(--hn-muted);font-size:14px;line-height:22px}
+.hn-diagram-node-label{display:block}
+.hn-diagram-group{position:absolute;z-index:0;border:2px dashed var(--hn-muted);border-radius:8px;pointer-events:none}
+.hn-diagram-group-label{position:absolute;z-index:2;padding:0 8px;background:var(--hn-paper);color:var(--hn-muted);text-align:left;overflow-wrap:anywhere;font:400 14px/22px "JetBrains Mono","PingFang SC","Noto Sans SC","Source Han Sans SC",sans-serif}
+.hn-diagram-svg{position:absolute;z-index:1;inset:0;display:block;max-width:none!important;height:100%!important;overflow:visible;pointer-events:none}
+.hn-diagram-edge{fill:none;stroke:var(--hn-muted);stroke-width:2;stroke-linejoin:round;stroke-linecap:butt;vector-effect:non-scaling-stroke}
+.hn-diagram-edge[data-line="dashed"]{stroke-dasharray:6 5}
+.hn-diagram-edge-label{position:absolute;z-index:4;padding:2px 7px;background:var(--hn-paper);border-radius:3px;color:var(--hn-muted);font:400 14px/22px "JetBrains Mono","PingFang SC","Noto Sans SC","Source Han Sans SC",sans-serif;text-align:center;overflow-wrap:anywhere;pointer-events:none}
+.hn-diagram-scroll-note{margin:8px 0 0;color:var(--hn-muted);font-size:14px;line-height:24px}
+.hn-diagram-scroll-note[hidden]{display:none}
+.hn-diagram-relations{margin-top:16px;border-top:1px solid #D7D0C6;padding-top:12px;font:400 16px/28px "JetBrains Mono","PingFang SC","Noto Sans SC","Source Han Sans SC",sans-serif}
+.hn-diagram-relations summary{cursor:pointer;color:var(--hn-muted);font-size:14px;line-height:24px;width:fit-content}
+.hn-diagram-relations summary:focus-visible{outline:2px solid var(--hn-cobalt);outline-offset:4px}
+.hn-diagram-relations p{margin:12px 0 0;font-size:14px;line-height:24px;color:var(--hn-muted)}
+.hn-diagram-relations ul{margin:8px 0 0;padding-left:1.4em}
+.hn-diagram-relations li{margin:0;overflow-wrap:anywhere}
+.hn-diagram-relations li+li{margin-top:4px}
+.hn-diagram>figcaption{margin-top:16px;color:var(--hn-muted);font:400 14px/24px "JetBrains Mono","PingFang SC","Noto Sans SC","Source Han Sans SC",sans-serif}
+.hn-diagram-error{margin:0;padding:16px;border:2px solid var(--hn-muted);border-radius:8px;font-size:16px;line-height:28px;background:var(--hn-surface)}
+.hn-diagram-data{display:none}
+@media(max-width:600px){.hn-diagram{margin-top:24px}.hn-diagram-node{font-size:16px;line-height:26px}.hn-diagram>.hn-diagram-description{font-size:16px;line-height:28px}}
+@media print{.hn-diagram{break-inside:auto}.hn-diagram>h3{break-after:avoid}.hn-diagram-canvas{overflow:visible}.hn-diagram-stage{break-inside:avoid}.hn-diagram-scroll-note{display:none}.hn-diagram-relations{break-inside:auto}.hn-diagram-relations>summary{display:none}.hn-diagram-relations>ul,.hn-diagram-relations>p{display:block}.hn-diagram>figcaption{break-before:avoid}}

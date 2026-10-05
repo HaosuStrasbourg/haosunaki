@@ -1,0 +1,1435 @@
+{
+  "schema": "haosunaki.tokens.v1",
+  "description": "HaosuNaki 轻量内部 token 单源；保留数值类型与语义别名，不声称完整兼容 DTCG。JSON 的 tokens.<语义名>.css 即语义到 CSS 映射表。",
+  "statusLegend": {
+    "confirmed": "已确认规则或样例采用值；仍需验证新内容布局。",
+    "implementation": "当前工具采用值或本次工作值；不冒充独立视觉确认。",
+    "legacy": "仅为旧入口兼容保留的工作值。"
+  },
+  "sources": {
+    "design-2026-10-03": "references/2026-10-03 - 设计规范.md",
+    "components-2026-10-04": "references/2026-10-04 - 已确认组件与组合.md",
+    "direction-2026-10-05": "本次已确认：普通节点白底，与阅读页面纸白及图面背景分开。",
+    "chart-implementation": "assets/chart-theme.css；scripts/figure_primitives.py",
+    "figure-implementation": "assets/figure-tools.css"
+  },
+  "tokens": {
+    "palette.paper": {
+      "type": "color",
+      "value": "#FAF8F4",
+      "status": "confirmed",
+      "description": "纸白",
+      "source": "design-2026-10-03"
+    },
+    "palette.white": {
+      "type": "color",
+      "value": "#FFFFFF",
+      "status": "confirmed",
+      "description": "纯白",
+      "source": "design-2026-10-03"
+    },
+    "palette.neutral-surface": {
+      "type": "color",
+      "value": "#F4F1EC",
+      "status": "confirmed",
+      "description": "浅中性灰",
+      "source": "design-2026-10-03"
+    },
+    "palette.callout-surface": {
+      "type": "color",
+      "value": "#F5F6FB",
+      "status": "confirmed",
+      "description": "提示浅底",
+      "source": "design-2026-10-03"
+    },
+    "palette.ink": {
+      "type": "color",
+      "value": "#282623",
+      "status": "confirmed",
+      "description": "深墨",
+      "source": "design-2026-10-03"
+    },
+    "palette.muted": {
+      "type": "color",
+      "value": "#68635D",
+      "status": "confirmed",
+      "description": "辅助灰",
+      "source": "design-2026-10-03"
+    },
+    "palette.line": {
+      "type": "color",
+      "value": "#D7D0C6",
+      "status": "confirmed",
+      "description": "边界灰",
+      "source": "design-2026-10-03"
+    },
+    "palette.cobalt": {
+      "type": "color",
+      "value": "#244AC7",
+      "status": "confirmed",
+      "description": "钴蓝",
+      "source": "design-2026-10-03"
+    },
+    "palette.coral": {
+      "type": "color",
+      "value": "#C45C46",
+      "status": "confirmed",
+      "description": "陶珊瑚",
+      "source": "design-2026-10-03"
+    },
+    "palette.berry": {
+      "type": "color",
+      "value": "#A33C62",
+      "status": "confirmed",
+      "description": "莓红",
+      "source": "design-2026-10-03"
+    },
+    "palette.lake": {
+      "type": "color",
+      "value": "#2E7F9E",
+      "status": "confirmed",
+      "description": "湖蓝",
+      "source": "design-2026-10-03"
+    },
+    "palette.lavender": {
+      "type": "color",
+      "value": "#7668A6",
+      "status": "confirmed",
+      "description": "藤紫",
+      "source": "design-2026-10-03"
+    },
+    "palette.tea": {
+      "type": "color",
+      "value": "#765B50",
+      "status": "confirmed",
+      "description": "深茶",
+      "source": "design-2026-10-03"
+    },
+    "palette.blue-1": {
+      "type": "color",
+      "value": "#EDF1FC",
+      "status": "confirmed",
+      "description": "浅钴蓝一级",
+      "source": "design-2026-10-03"
+    },
+    "palette.blue-2": {
+      "type": "color",
+      "value": "#C3CFF3",
+      "status": "confirmed",
+      "description": "浅钴蓝二级",
+      "source": "design-2026-10-03"
+    },
+    "palette.blue-3": {
+      "type": "color",
+      "value": "#91A6E6",
+      "status": "confirmed",
+      "description": "浅钴蓝三级",
+      "source": "design-2026-10-03"
+    },
+    "palette.blue-4": {
+      "type": "color",
+      "value": "#5678D6",
+      "status": "confirmed",
+      "description": "浅钴蓝四级",
+      "source": "design-2026-10-03"
+    },
+    "palette.coral-light": {
+      "type": "color",
+      "value": "#E5AB9F",
+      "status": "confirmed",
+      "description": "浅珊瑚",
+      "source": "design-2026-10-03"
+    },
+    "palette.blue-border": {
+      "type": "color",
+      "value": "#A9BCE9",
+      "status": "confirmed",
+      "description": "浅蓝边界",
+      "source": "design-2026-10-03"
+    },
+    "palette.lake-dark": {
+      "type": "color",
+      "value": "#24637C",
+      "status": "confirmed",
+      "description": "深湖蓝",
+      "source": "design-2026-10-03"
+    },
+    "palette.lake-light": {
+      "type": "color",
+      "value": "#E8F0F3",
+      "status": "confirmed",
+      "description": "浅湖蓝底",
+      "source": "design-2026-10-03"
+    },
+    "palette.lake-border": {
+      "type": "color",
+      "value": "#ADCBD7",
+      "status": "confirmed",
+      "description": "浅湖蓝边界",
+      "source": "design-2026-10-03"
+    },
+    "palette.coral-dark": {
+      "type": "color",
+      "value": "#974735",
+      "status": "confirmed",
+      "description": "深珊瑚",
+      "source": "design-2026-10-03"
+    },
+    "palette.coral-pale": {
+      "type": "color",
+      "value": "#F6EAE5",
+      "status": "confirmed",
+      "description": "浅珊瑚底",
+      "source": "design-2026-10-03"
+    },
+    "palette.coral-border": {
+      "type": "color",
+      "value": "#D9B8AC",
+      "status": "confirmed",
+      "description": "浅珊瑚边界",
+      "source": "design-2026-10-03"
+    },
+    "palette.berry-light": {
+      "type": "color",
+      "value": "#F3E8ED",
+      "status": "confirmed",
+      "description": "浅莓红底",
+      "source": "design-2026-10-03"
+    },
+    "palette.berry-border": {
+      "type": "color",
+      "value": "#D5ADBD",
+      "status": "confirmed",
+      "description": "浅莓红边界",
+      "source": "design-2026-10-03"
+    },
+    "palette.completed-text": {
+      "type": "color",
+      "value": "#827B72",
+      "status": "confirmed",
+      "description": "行动完成文字灰",
+      "source": "design-2026-10-03"
+    },
+    "surface.page": {
+      "type": "color",
+      "value": "{palette.paper}",
+      "status": "confirmed",
+      "description": "阅读页面底色；不作为节点底色",
+      "source": "design-2026-10-03",
+      "css": "--paper"
+    },
+    "surface.neutral": {
+      "type": "color",
+      "value": "{palette.neutral-surface}",
+      "status": "confirmed",
+      "description": "引用、指标、表头的中性分组底",
+      "source": "components-2026-10-04",
+      "css": "--surface"
+    },
+    "surface.figure": {
+      "type": "color",
+      "value": "{palette.paper}",
+      "status": "implementation",
+      "description": "独立图面沿用纸白；普通节点另用纯白。",
+      "source": "chart-implementation",
+      "css": "--figure-surface"
+    },
+    "surface.node": {
+      "type": "color",
+      "value": "{palette.white}",
+      "status": "confirmed",
+      "description": "普通流程／机制节点白底",
+      "source": "direction-2026-10-05",
+      "css": "--node-fill",
+      "history": "2026-10-05 明确采用 #FFFFFF；旧样张 #FAF8F4 仅保留为历史。"
+    },
+    "surface.emphasis": {
+      "type": "color",
+      "value": "{palette.blue-1}",
+      "status": "confirmed",
+      "description": "明确强调对象的浅钴蓝底",
+      "source": "design-2026-10-03",
+      "css": "--emphasis-fill"
+    },
+    "surface.callout": {
+      "type": "color",
+      "value": "{palette.callout-surface}",
+      "status": "confirmed",
+      "description": "建议与结论提示底",
+      "source": "components-2026-10-04",
+      "css": "--callout-surface"
+    },
+    "text.primary": {
+      "type": "color",
+      "value": "{palette.ink}",
+      "status": "confirmed",
+      "description": "主要文字",
+      "source": "design-2026-10-03",
+      "css": "--ink"
+    },
+    "text.secondary": {
+      "type": "color",
+      "value": "{palette.muted}",
+      "status": "confirmed",
+      "description": "辅助文字",
+      "source": "design-2026-10-03",
+      "css": "--muted"
+    },
+    "border.default": {
+      "type": "color",
+      "value": "{palette.line}",
+      "status": "confirmed",
+      "description": "中性细边与分隔",
+      "source": "design-2026-10-03",
+      "css": "--line"
+    },
+    "accent.primary": {
+      "type": "color",
+      "value": "{palette.cobalt}",
+      "status": "confirmed",
+      "description": "链接、焦点与已明确的单一重点",
+      "source": "design-2026-10-03",
+      "css": "--accent"
+    },
+    "code.surface": {
+      "type": "color",
+      "value": "{palette.ink}",
+      "status": "confirmed",
+      "description": "代码区深底",
+      "source": "components-2026-10-04",
+      "css": "--code-surface"
+    },
+    "code.text": {
+      "type": "color",
+      "value": "{palette.paper}",
+      "status": "confirmed",
+      "description": "代码区浅色文字",
+      "source": "components-2026-10-04",
+      "css": "--code-text"
+    },
+    "interaction.selected": {
+      "type": "color",
+      "value": "{palette.cobalt}",
+      "status": "confirmed",
+      "description": "交互选中；不代表成功",
+      "source": "components-2026-10-04",
+      "css": "--selected"
+    },
+    "interaction.check": {
+      "type": "color",
+      "value": "{palette.white}",
+      "status": "confirmed",
+      "description": "复选框白色勾",
+      "source": "components-2026-10-04",
+      "css": "--check-color"
+    },
+    "interaction.completed-text": {
+      "type": "color",
+      "value": "{palette.completed-text}",
+      "status": "confirmed",
+      "description": "行动完成退浅文字",
+      "source": "components-2026-10-04",
+      "css": "--completed-text"
+    },
+    "category.cobalt": {
+      "type": "color",
+      "value": "{palette.cobalt}",
+      "status": "confirmed",
+      "description": "分类候选 钴蓝；先绑定稳定对象身份，不自动赋予状态含义",
+      "source": "design-2026-10-03",
+      "css": "--cobalt"
+    },
+    "category.coral": {
+      "type": "color",
+      "value": "{palette.coral}",
+      "status": "confirmed",
+      "description": "分类候选 陶珊瑚；先绑定稳定对象身份，不自动赋予状态含义",
+      "source": "design-2026-10-03",
+      "css": "--coral"
+    },
+    "category.berry": {
+      "type": "color",
+      "value": "{palette.berry}",
+      "status": "confirmed",
+      "description": "分类候选 莓红；先绑定稳定对象身份，不自动赋予状态含义",
+      "source": "design-2026-10-03",
+      "css": "--berry"
+    },
+    "category.lake": {
+      "type": "color",
+      "value": "{palette.lake}",
+      "status": "confirmed",
+      "description": "分类候选 湖蓝；先绑定稳定对象身份，不自动赋予状态含义",
+      "source": "design-2026-10-03",
+      "css": "--lake"
+    },
+    "category.lavender": {
+      "type": "color",
+      "value": "{palette.lavender}",
+      "status": "confirmed",
+      "description": "分类候选 藤紫；先绑定稳定对象身份，不自动赋予状态含义",
+      "source": "design-2026-10-03",
+      "css": "--lavender"
+    },
+    "category.tea": {
+      "type": "color",
+      "value": "{palette.tea}",
+      "status": "confirmed",
+      "description": "分类候选 深茶；先绑定稳定对象身份，不自动赋予状态含义",
+      "source": "design-2026-10-03",
+      "css": "--tea"
+    },
+    "scale.sequential.1": {
+      "type": "color",
+      "value": "{palette.blue-1}",
+      "status": "confirmed",
+      "description": "连续量值色阶；领域色义优先",
+      "source": "design-2026-10-03",
+      "css": "--sequential-1"
+    },
+    "scale.sequential.2": {
+      "type": "color",
+      "value": "{palette.blue-2}",
+      "status": "confirmed",
+      "description": "连续量值色阶；领域色义优先",
+      "source": "design-2026-10-03",
+      "css": "--sequential-2"
+    },
+    "scale.sequential.3": {
+      "type": "color",
+      "value": "{palette.blue-3}",
+      "status": "confirmed",
+      "description": "连续量值色阶；领域色义优先",
+      "source": "design-2026-10-03",
+      "css": "--sequential-3"
+    },
+    "scale.sequential.4": {
+      "type": "color",
+      "value": "{palette.blue-4}",
+      "status": "confirmed",
+      "description": "连续量值色阶；领域色义优先",
+      "source": "design-2026-10-03",
+      "css": "--sequential-4"
+    },
+    "scale.sequential.5": {
+      "type": "color",
+      "value": "{palette.cobalt}",
+      "status": "confirmed",
+      "description": "连续量值色阶；领域色义优先",
+      "source": "design-2026-10-03",
+      "css": "--sequential-5"
+    },
+    "scale.diverging.1": {
+      "type": "color",
+      "value": "{palette.cobalt}",
+      "status": "confirmed",
+      "description": "发散量值色阶；领域色义优先",
+      "source": "design-2026-10-03",
+      "css": "--diverging-1"
+    },
+    "scale.diverging.2": {
+      "type": "color",
+      "value": "{palette.blue-3}",
+      "status": "confirmed",
+      "description": "发散量值色阶；领域色义优先",
+      "source": "design-2026-10-03",
+      "css": "--diverging-2"
+    },
+    "scale.diverging.3": {
+      "type": "color",
+      "value": "{palette.paper}",
+      "status": "confirmed",
+      "description": "发散量值色阶；领域色义优先",
+      "source": "design-2026-10-03",
+      "css": "--diverging-3"
+    },
+    "scale.diverging.4": {
+      "type": "color",
+      "value": "{palette.coral-light}",
+      "status": "confirmed",
+      "description": "发散量值色阶；领域色义优先",
+      "source": "design-2026-10-03",
+      "css": "--diverging-4"
+    },
+    "scale.diverging.5": {
+      "type": "color",
+      "value": "{palette.coral}",
+      "status": "confirmed",
+      "description": "发散量值色阶；领域色义优先",
+      "source": "design-2026-10-03",
+      "css": "--diverging-5"
+    },
+    "status.pending.text": {
+      "type": "color",
+      "value": "{palette.muted}",
+      "status": "confirmed",
+      "description": "审阅／任务语境的 pending text；不外推金融或其他业务语义",
+      "source": "components-2026-10-04",
+      "css": "--status-pending-text"
+    },
+    "status.pending.surface": {
+      "type": "color",
+      "value": "{palette.neutral-surface}",
+      "status": "confirmed",
+      "description": "审阅／任务语境的 pending surface；不外推金融或其他业务语义",
+      "source": "components-2026-10-04",
+      "css": "--status-pending-surface"
+    },
+    "status.pending.border": {
+      "type": "color",
+      "value": "{palette.line}",
+      "status": "confirmed",
+      "description": "审阅／任务语境的 pending border；不外推金融或其他业务语义",
+      "source": "components-2026-10-04",
+      "css": "--status-pending-border"
+    },
+    "status.running.text": {
+      "type": "color",
+      "value": "{palette.cobalt}",
+      "status": "confirmed",
+      "description": "审阅／任务语境的 running text；不外推金融或其他业务语义",
+      "source": "components-2026-10-04",
+      "css": "--status-running-text"
+    },
+    "status.running.surface": {
+      "type": "color",
+      "value": "{palette.blue-1}",
+      "status": "confirmed",
+      "description": "审阅／任务语境的 running surface；不外推金融或其他业务语义",
+      "source": "components-2026-10-04",
+      "css": "--status-running-surface"
+    },
+    "status.running.border": {
+      "type": "color",
+      "value": "{palette.blue-border}",
+      "status": "confirmed",
+      "description": "审阅／任务语境的 running border；不外推金融或其他业务语义",
+      "source": "components-2026-10-04",
+      "css": "--status-running-border"
+    },
+    "status.success.text": {
+      "type": "color",
+      "value": "{palette.lake-dark}",
+      "status": "confirmed",
+      "description": "审阅／任务语境的 success text；不外推金融或其他业务语义",
+      "source": "components-2026-10-04",
+      "css": "--status-success-text"
+    },
+    "status.success.surface": {
+      "type": "color",
+      "value": "{palette.lake-light}",
+      "status": "confirmed",
+      "description": "审阅／任务语境的 success surface；不外推金融或其他业务语义",
+      "source": "components-2026-10-04",
+      "css": "--status-success-surface"
+    },
+    "status.success.border": {
+      "type": "color",
+      "value": "{palette.lake-border}",
+      "status": "confirmed",
+      "description": "审阅／任务语境的 success border；不外推金融或其他业务语义",
+      "source": "components-2026-10-04",
+      "css": "--status-success-border"
+    },
+    "status.warning.text": {
+      "type": "color",
+      "value": "{palette.coral-dark}",
+      "status": "confirmed",
+      "description": "审阅／任务语境的 warning text；不外推金融或其他业务语义",
+      "source": "components-2026-10-04",
+      "css": "--status-warning-text"
+    },
+    "status.warning.surface": {
+      "type": "color",
+      "value": "{palette.coral-pale}",
+      "status": "confirmed",
+      "description": "审阅／任务语境的 warning surface；不外推金融或其他业务语义",
+      "source": "components-2026-10-04",
+      "css": "--status-warning-surface"
+    },
+    "status.warning.border": {
+      "type": "color",
+      "value": "{palette.coral-border}",
+      "status": "confirmed",
+      "description": "审阅／任务语境的 warning border；不外推金融或其他业务语义",
+      "source": "components-2026-10-04",
+      "css": "--status-warning-border"
+    },
+    "status.failure.text": {
+      "type": "color",
+      "value": "{palette.berry}",
+      "status": "confirmed",
+      "description": "审阅／任务语境的 failure text；不外推金融或其他业务语义",
+      "source": "components-2026-10-04",
+      "css": "--status-failure-text"
+    },
+    "status.failure.surface": {
+      "type": "color",
+      "value": "{palette.berry-light}",
+      "status": "confirmed",
+      "description": "审阅／任务语境的 failure surface；不外推金融或其他业务语义",
+      "source": "components-2026-10-04",
+      "css": "--status-failure-surface"
+    },
+    "status.failure.border": {
+      "type": "color",
+      "value": "{palette.berry-border}",
+      "status": "confirmed",
+      "description": "审阅／任务语境的 failure border；不外推金融或其他业务语义",
+      "source": "components-2026-10-04",
+      "css": "--status-failure-border"
+    },
+    "font.base.zh-title": {
+      "type": "fontFamily",
+      "value": [
+        "Songti SC",
+        "Noto Serif SC",
+        "Source Han Serif SC",
+        "serif"
+      ],
+      "status": "confirmed",
+      "description": "中文标题字体栈",
+      "source": "design-2026-10-03"
+    },
+    "font.base.zh-body": {
+      "type": "fontFamily",
+      "value": [
+        "PingFang SC",
+        "Noto Sans SC",
+        "Source Han Sans SC",
+        "sans-serif"
+      ],
+      "status": "confirmed",
+      "description": "中文正文字体栈",
+      "source": "design-2026-10-03"
+    },
+    "font.base.en-title": {
+      "type": "fontFamily",
+      "value": [
+        "IBM Plex Mono",
+        "monospace"
+      ],
+      "status": "confirmed",
+      "description": "英文标题字体栈",
+      "source": "design-2026-10-03"
+    },
+    "font.base.en-body": {
+      "type": "fontFamily",
+      "value": [
+        "JetBrains Mono",
+        "monospace"
+      ],
+      "status": "confirmed",
+      "description": "英文正文字体栈",
+      "source": "design-2026-10-03"
+    },
+    "font.base.number": {
+      "type": "fontFamily",
+      "value": [
+        "Georgia",
+        "Lora",
+        "serif"
+      ],
+      "status": "confirmed",
+      "description": "数字字体栈",
+      "source": "design-2026-10-03"
+    },
+    "font.base.mixed-body": {
+      "type": "fontFamily",
+      "value": [
+        "JetBrains Mono",
+        "PingFang SC",
+        "Noto Sans SC",
+        "Source Han Sans SC",
+        "sans-serif"
+      ],
+      "status": "confirmed",
+      "description": "中英混排正文字体栈",
+      "source": "design-2026-10-03"
+    },
+    "font.base.mixed-title": {
+      "type": "fontFamily",
+      "value": [
+        "IBM Plex Mono",
+        "Songti SC",
+        "Noto Serif SC",
+        "Source Han Serif SC",
+        "serif"
+      ],
+      "status": "confirmed",
+      "description": "中英混排标题字体栈",
+      "source": "design-2026-10-03"
+    },
+    "font.base.component-body": {
+      "type": "fontFamily",
+      "value": [
+        "JetBrains Mono",
+        "PingFang SC",
+        "Noto Sans SC",
+        "sans-serif"
+      ],
+      "status": "confirmed",
+      "description": "紧凑组件正文字体栈",
+      "source": "design-2026-10-03"
+    },
+    "font.base.component-title": {
+      "type": "fontFamily",
+      "value": [
+        "IBM Plex Mono",
+        "Songti SC",
+        "Noto Serif SC",
+        "serif"
+      ],
+      "status": "confirmed",
+      "description": "紧凑组件标题字体栈",
+      "source": "design-2026-10-03"
+    },
+    "font.title.zh": {
+      "type": "fontFamily",
+      "value": "{font.base.zh-title}",
+      "status": "confirmed",
+      "description": "按用途选择字体，不强制所有文字使用同一字体栈",
+      "source": "design-2026-10-03",
+      "css": "--zh-title"
+    },
+    "font.body.zh": {
+      "type": "fontFamily",
+      "value": "{font.base.zh-body}",
+      "status": "confirmed",
+      "description": "按用途选择字体，不强制所有文字使用同一字体栈",
+      "source": "design-2026-10-03",
+      "css": "--zh-body"
+    },
+    "font.title.en": {
+      "type": "fontFamily",
+      "value": "{font.base.en-title}",
+      "status": "confirmed",
+      "description": "按用途选择字体，不强制所有文字使用同一字体栈",
+      "source": "design-2026-10-03",
+      "css": "--en-title"
+    },
+    "font.body.en": {
+      "type": "fontFamily",
+      "value": "{font.base.en-body}",
+      "status": "confirmed",
+      "description": "按用途选择字体，不强制所有文字使用同一字体栈",
+      "source": "design-2026-10-03",
+      "css": "--en-body"
+    },
+    "font.number": {
+      "type": "fontFamily",
+      "value": "{font.base.number}",
+      "status": "confirmed",
+      "description": "按用途选择字体，不强制所有文字使用同一字体栈",
+      "source": "design-2026-10-03",
+      "css": "--num"
+    },
+    "font.body.mixed": {
+      "type": "fontFamily",
+      "value": "{font.base.mixed-body}",
+      "status": "confirmed",
+      "description": "按用途选择字体，不强制所有文字使用同一字体栈",
+      "source": "design-2026-10-03",
+      "css": "--reading-body"
+    },
+    "font.title.mixed": {
+      "type": "fontFamily",
+      "value": "{font.base.mixed-title}",
+      "status": "confirmed",
+      "description": "按用途选择字体，不强制所有文字使用同一字体栈",
+      "source": "design-2026-10-03",
+      "css": "--reading-title"
+    },
+    "font.component.body": {
+      "type": "fontFamily",
+      "value": "{font.base.component-body}",
+      "status": "confirmed",
+      "description": "按用途选择字体，不强制所有文字使用同一字体栈",
+      "source": "design-2026-10-03",
+      "css": "--component-body"
+    },
+    "font.component.title": {
+      "type": "fontFamily",
+      "value": "{font.base.component-title}",
+      "status": "confirmed",
+      "description": "按用途选择字体，不强制所有文字使用同一字体栈",
+      "source": "design-2026-10-03",
+      "css": "--component-title"
+    },
+    "type.body.zh.size": {
+      "type": "dimension",
+      "value": 20,
+      "status": "confirmed",
+      "description": "zh 长文正文字号",
+      "source": "design-2026-10-03",
+      "unit": "px",
+      "css": "--body-size"
+    },
+    "type.body.zh.line": {
+      "type": "dimension",
+      "value": 36,
+      "status": "confirmed",
+      "description": "zh 长文正文行高",
+      "source": "design-2026-10-03",
+      "unit": "px",
+      "css": "--body-line"
+    },
+    "type.body.en.size": {
+      "type": "dimension",
+      "value": 19,
+      "status": "confirmed",
+      "description": "en 长文正文字号",
+      "source": "design-2026-10-03",
+      "unit": "px",
+      "css": "--en-size"
+    },
+    "type.body.en.line": {
+      "type": "dimension",
+      "value": 32,
+      "status": "confirmed",
+      "description": "en 长文正文行高",
+      "source": "design-2026-10-03",
+      "unit": "px",
+      "css": "--en-line"
+    },
+    "type.component.body.size": {
+      "type": "dimension",
+      "value": 15,
+      "status": "confirmed",
+      "description": "紧凑组件 body 字号",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--component-body-size"
+    },
+    "type.component.body.line": {
+      "type": "dimension",
+      "value": 24,
+      "status": "confirmed",
+      "description": "紧凑组件 body 行高",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--component-body-line"
+    },
+    "type.component.small.size": {
+      "type": "dimension",
+      "value": 13,
+      "status": "confirmed",
+      "description": "紧凑组件 small 字号",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--component-small-size"
+    },
+    "type.component.small.line": {
+      "type": "dimension",
+      "value": 20,
+      "status": "confirmed",
+      "description": "紧凑组件 small 行高",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--component-small-line"
+    },
+    "type.component.badge.size": {
+      "type": "dimension",
+      "value": 14,
+      "status": "confirmed",
+      "description": "紧凑组件 badge 字号",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--component-badge-size"
+    },
+    "type.component.badge.line": {
+      "type": "dimension",
+      "value": 20,
+      "status": "confirmed",
+      "description": "紧凑组件 badge 行高",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--component-badge-line"
+    },
+    "type.component.metric.size": {
+      "type": "dimension",
+      "value": 32,
+      "status": "confirmed",
+      "description": "紧凑组件 metric 字号",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--component-metric-size"
+    },
+    "type.component.metric.line": {
+      "type": "dimension",
+      "value": 38,
+      "status": "confirmed",
+      "description": "紧凑组件 metric 行高",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--component-metric-line"
+    },
+    "type.component.table-number.size": {
+      "type": "dimension",
+      "value": 18,
+      "status": "confirmed",
+      "description": "紧凑组件 table-number 字号",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--component-table-number-size"
+    },
+    "type.component.table-number.line": {
+      "type": "dimension",
+      "value": 24,
+      "status": "confirmed",
+      "description": "紧凑组件 table-number 行高",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--component-table-number-line"
+    },
+    "type.component.identity.size": {
+      "type": "dimension",
+      "value": 12,
+      "status": "confirmed",
+      "description": "紧凑组件 identity 字号",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--component-identity-size"
+    },
+    "type.component.identity.line": {
+      "type": "dimension",
+      "value": 18,
+      "status": "confirmed",
+      "description": "紧凑组件 identity 行高",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--component-identity-line"
+    },
+    "type.component.title.size": {
+      "type": "dimension",
+      "value": 16,
+      "status": "confirmed",
+      "description": "紧凑组件 title 字号",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--component-title-size"
+    },
+    "type.component.title.line": {
+      "type": "dimension",
+      "value": 24,
+      "status": "confirmed",
+      "description": "紧凑组件 title 行高",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--component-title-line"
+    },
+    "type.component.code.size": {
+      "type": "dimension",
+      "value": 13,
+      "status": "confirmed",
+      "description": "紧凑组件 code 字号",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--component-code-size"
+    },
+    "type.component.code.line": {
+      "type": "dimension",
+      "value": 21,
+      "status": "confirmed",
+      "description": "紧凑组件 code 行高",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--component-code-line"
+    },
+    "type.chart.title.size": {
+      "type": "dimension",
+      "value": 24,
+      "status": "implementation",
+      "description": "chart 图形 title 字号；保持图形角色独立",
+      "source": "chart-implementation",
+      "unit": "px",
+      "css": "--chart-title-size"
+    },
+    "type.chart.label.size": {
+      "type": "dimension",
+      "value": 14,
+      "status": "implementation",
+      "description": "chart 图形 label 字号；保持图形角色独立",
+      "source": "chart-implementation",
+      "unit": "px",
+      "css": "--chart-label-size"
+    },
+    "type.chart.number.size": {
+      "type": "dimension",
+      "value": 14,
+      "status": "implementation",
+      "description": "chart 图形 number 字号；保持图形角色独立",
+      "source": "chart-implementation",
+      "unit": "px",
+      "css": "--chart-number-size"
+    },
+    "type.figure.label.size": {
+      "type": "dimension",
+      "value": 16,
+      "status": "implementation",
+      "description": "figure 图形 label 字号；保持图形角色独立",
+      "source": "figure-implementation",
+      "unit": "px",
+      "css": "--figure-label-size"
+    },
+    "type.figure.small.size": {
+      "type": "dimension",
+      "value": 14,
+      "status": "implementation",
+      "description": "figure 图形 small 字号；保持图形角色独立",
+      "source": "figure-implementation",
+      "unit": "px",
+      "css": "--figure-small-size"
+    },
+    "type.figure.value.size": {
+      "type": "dimension",
+      "value": 22,
+      "status": "implementation",
+      "description": "figure 图形 value 字号；保持图形角色独立",
+      "source": "figure-implementation",
+      "unit": "px",
+      "css": "--figure-value-size"
+    },
+    "radius.quote": {
+      "type": "dimension",
+      "value": 5,
+      "status": "confirmed",
+      "description": "quote 已确认组件圆角",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--radius-quote"
+    },
+    "radius.metrics": {
+      "type": "dimension",
+      "value": 6,
+      "status": "confirmed",
+      "description": "metrics 已确认组件圆角",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--radius-metrics"
+    },
+    "radius.table": {
+      "type": "dimension",
+      "value": 6,
+      "status": "confirmed",
+      "description": "table 已确认组件圆角",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--radius-table"
+    },
+    "radius.code": {
+      "type": "dimension",
+      "value": 7,
+      "status": "confirmed",
+      "description": "code 已确认组件圆角",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--radius-code"
+    },
+    "radius.callout": {
+      "type": "dimension",
+      "value": 6,
+      "status": "confirmed",
+      "description": "callout 已确认组件圆角",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--radius-callout"
+    },
+    "radius.badge": {
+      "type": "dimension",
+      "value": 4,
+      "status": "confirmed",
+      "description": "badge 已确认组件圆角",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--radius-badge"
+    },
+    "radius.legacy": {
+      "type": "dimension",
+      "value": 16,
+      "status": "legacy",
+      "description": "旧一般内容卡片工作值；不用于覆盖各组件圆角",
+      "source": "design-2026-10-03",
+      "unit": "px",
+      "css": "--radius",
+      "history": "保留 --radius 兼容旧布局，不把 16px 记为统一确认值。"
+    },
+    "space.8": {
+      "type": "dimension",
+      "value": 8,
+      "status": "confirmed",
+      "description": "主要间距档位 8px",
+      "source": "design-2026-10-03",
+      "unit": "px"
+    },
+    "space.12": {
+      "type": "dimension",
+      "value": 12,
+      "status": "confirmed",
+      "description": "主要间距档位 12px",
+      "source": "design-2026-10-03",
+      "unit": "px"
+    },
+    "space.16": {
+      "type": "dimension",
+      "value": 16,
+      "status": "confirmed",
+      "description": "主要间距档位 16px",
+      "source": "design-2026-10-03",
+      "unit": "px"
+    },
+    "space.24": {
+      "type": "dimension",
+      "value": 24,
+      "status": "confirmed",
+      "description": "主要间距档位 24px",
+      "source": "design-2026-10-03",
+      "unit": "px"
+    },
+    "space.32": {
+      "type": "dimension",
+      "value": 32,
+      "status": "confirmed",
+      "description": "主要间距档位 32px",
+      "source": "design-2026-10-03",
+      "unit": "px"
+    },
+    "space.48": {
+      "type": "dimension",
+      "value": 48,
+      "status": "confirmed",
+      "description": "主要间距档位 48px",
+      "source": "design-2026-10-03",
+      "unit": "px"
+    },
+    "space.64": {
+      "type": "dimension",
+      "value": 64,
+      "status": "confirmed",
+      "description": "主要间距档位 64px",
+      "source": "design-2026-10-03",
+      "unit": "px"
+    },
+    "space.section": {
+      "type": "dimension",
+      "value": "{space.64}",
+      "status": "confirmed",
+      "description": "章节间距",
+      "source": "design-2026-10-03",
+      "unit": "px",
+      "css": "--section-space"
+    },
+    "space.component.quote.y": {
+      "type": "dimension",
+      "value": 17,
+      "status": "confirmed",
+      "description": "quote 组件内边距 y",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--quote-padding-y"
+    },
+    "space.component.quote.x": {
+      "type": "dimension",
+      "value": 20,
+      "status": "confirmed",
+      "description": "quote 组件内边距 x",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--quote-padding-x"
+    },
+    "space.component.metrics.y": {
+      "type": "dimension",
+      "value": 18,
+      "status": "confirmed",
+      "description": "metrics 组件内边距 y",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--metrics-padding-y"
+    },
+    "space.component.metrics.x": {
+      "type": "dimension",
+      "value": 20,
+      "status": "confirmed",
+      "description": "metrics 组件内边距 x",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--metrics-padding-x"
+    },
+    "space.component.callout.y": {
+      "type": "dimension",
+      "value": 17,
+      "status": "confirmed",
+      "description": "callout 组件内边距 y",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--callout-padding-y"
+    },
+    "space.component.callout.x": {
+      "type": "dimension",
+      "value": 18,
+      "status": "confirmed",
+      "description": "callout 组件内边距 x",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--callout-padding-x"
+    },
+    "space.component.table.y": {
+      "type": "dimension",
+      "value": 11,
+      "status": "confirmed",
+      "description": "table 组件内边距 y",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--table-padding-y"
+    },
+    "space.component.table.x": {
+      "type": "dimension",
+      "value": 13,
+      "status": "confirmed",
+      "description": "table 组件内边距 x",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--table-padding-x"
+    },
+    "space.component.badge.y": {
+      "type": "dimension",
+      "value": 5,
+      "status": "confirmed",
+      "description": "badge 组件内边距 y",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--badge-padding-y"
+    },
+    "space.component.badge.x": {
+      "type": "dimension",
+      "value": 10,
+      "status": "confirmed",
+      "description": "badge 组件内边距 x",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--badge-padding-x"
+    },
+    "space.metrics.column": {
+      "type": "dimension",
+      "value": "{space.24}",
+      "status": "confirmed",
+      "description": "指标列间距",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--metrics-column-gap"
+    },
+    "space.metrics.row": {
+      "type": "dimension",
+      "value": 20,
+      "status": "confirmed",
+      "description": "指标行间距",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--metrics-row-gap"
+    },
+    "space.status.inline": {
+      "type": "dimension",
+      "value": "{space.12}",
+      "status": "confirmed",
+      "description": "标签紧随标题的横向间距",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--status-inline-gap"
+    },
+    "space.status.wrap": {
+      "type": "dimension",
+      "value": "{space.8}",
+      "status": "confirmed",
+      "description": "标签换行后的行间距",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--status-wrap-gap"
+    },
+    "stroke.grid.major.opacity": {
+      "type": "opacity",
+      "value": 0.105,
+      "status": "implementation",
+      "description": "grid.major 线条透明度",
+      "source": "chart-implementation",
+      "css": "--grid-major-opacity"
+    },
+    "stroke.grid.major.width": {
+      "type": "dimension",
+      "value": 1,
+      "status": "implementation",
+      "description": "grid.major 线宽",
+      "source": "chart-implementation",
+      "unit": "px",
+      "css": "--grid-major-width"
+    },
+    "stroke.grid.minor.opacity": {
+      "type": "opacity",
+      "value": 0.03,
+      "status": "implementation",
+      "description": "grid.minor 线条透明度",
+      "source": "chart-implementation",
+      "css": "--grid-minor-opacity",
+      "history": "主辅网格需有层次的规则已确认；本次具体实现值待视觉确认。"
+    },
+    "stroke.grid.minor.width": {
+      "type": "dimension",
+      "value": 0.6,
+      "status": "implementation",
+      "description": "grid.minor 线宽",
+      "source": "chart-implementation",
+      "unit": "px",
+      "css": "--grid-minor-width",
+      "history": "主辅网格需有层次的规则已确认；本次具体实现值待视觉确认。 由旧实现 1px 调整为 0.6px。"
+    },
+    "stroke.baseline.opacity": {
+      "type": "opacity",
+      "value": 0.28,
+      "status": "implementation",
+      "description": "baseline 线条透明度",
+      "source": "chart-implementation",
+      "css": "--baseline-opacity"
+    },
+    "stroke.baseline.width": {
+      "type": "dimension",
+      "value": 1,
+      "status": "implementation",
+      "description": "baseline 线宽",
+      "source": "chart-implementation",
+      "unit": "px",
+      "css": "--baseline-width"
+    },
+    "stroke.node.width": {
+      "type": "dimension",
+      "value": 1.5,
+      "status": "implementation",
+      "description": "node 图形线宽",
+      "source": "chart-implementation",
+      "unit": "px",
+      "css": "--node-stroke-width"
+    },
+    "stroke.edge.width": {
+      "type": "dimension",
+      "value": 1.5,
+      "status": "implementation",
+      "description": "edge 图形线宽",
+      "source": "chart-implementation",
+      "unit": "px",
+      "css": "--edge-stroke-width"
+    },
+    "stroke.figure.edge.width": {
+      "type": "dimension",
+      "value": 2,
+      "status": "implementation",
+      "description": "figure.edge 图形线宽",
+      "source": "figure-implementation",
+      "unit": "px",
+      "css": "--figure-edge-width"
+    },
+    "stroke.callout.width": {
+      "type": "dimension",
+      "value": 2,
+      "status": "confirmed",
+      "description": "提示框左侧强调线宽",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--callout-stroke-width"
+    },
+    "stroke.default.width": {
+      "type": "dimension",
+      "value": 1,
+      "status": "confirmed",
+      "description": "普通组件边界线宽",
+      "source": "components-2026-10-04",
+      "unit": "px",
+      "css": "--border-width"
+    },
+    "type.heading.h1.size": {
+      "type": "dimension",
+      "value": 48,
+      "status": "confirmed",
+      "description": "h1 阅读字号",
+      "source": "design-2026-10-03",
+      "unit": "px",
+      "css": "--heading-h1-size"
+    },
+    "type.heading.h1.line": {
+      "type": "number",
+      "value": 1.3,
+      "status": "confirmed",
+      "description": "桌面主标题的倍数行高",
+      "source": "design-2026-10-03",
+      "css": "--heading-h1-line"
+    },
+    "type.chart.title.line": {
+      "type": "dimension",
+      "value": 32,
+      "status": "implementation",
+      "description": "chart 图形 title 行高；供文字测量与绘制共用。",
+      "source": "chart-implementation",
+      "unit": "px",
+      "css": "--chart-title-line"
+    },
+    "type.chart.label.line": {
+      "type": "dimension",
+      "value": 20,
+      "status": "implementation",
+      "description": "chart 图形 label 行高；供文字测量与绘制共用。",
+      "source": "chart-implementation",
+      "unit": "px",
+      "css": "--chart-label-line"
+    },
+    "type.chart.note.line": {
+      "type": "dimension",
+      "value": 22,
+      "status": "implementation",
+      "description": "chart 图形 note 行高；供文字测量与绘制共用。",
+      "source": "chart-implementation",
+      "unit": "px",
+      "css": "--chart-note-line"
+    },
+    "type.chart.note.size": {
+      "type": "dimension",
+      "value": 14,
+      "status": "implementation",
+      "description": "chart 图形 note 字号；供文字测量与绘制共用。",
+      "source": "chart-implementation",
+      "unit": "px",
+      "css": "--chart-note-size"
+    },
+    "type.chart.note.inline-line": {
+      "type": "dimension",
+      "value": 20,
+      "unit": "px",
+      "css": "--chart-note-inline-line",
+      "status": "implementation",
+      "description": "图内辅助标注行高；保留旧轴说明与连线注释 20px，与图注 22px 分开。"
+    }
+  },
+  "modes": {
+    "mobile": {
+      "media": "(max-width:600px)",
+      "description": "长文手机排版；不改变紧凑组件密度。",
+      "overrides": {
+        "type.body.zh.size": 19,
+        "type.body.zh.line": 34,
+        "type.body.en.size": 18,
+        "type.body.en.line": 30,
+        "space.section": 48,
+        "type.heading.h1.size": 36,
+        "type.heading.h1.line": 1.2777777777777777
+      }
+    },
+    "compact": {
+      "media": "(max-width:400px)",
+      "description": "已确认组件的窄屏内边距。",
+      "overrides": {
+        "space.component.quote.x": 16,
+        "space.component.quote.y": 16,
+        "space.component.metrics.x": 18,
+        "space.component.metrics.y": 16,
+        "space.component.callout.x": 16,
+        "space.component.callout.y": 16
+      }
+    }
+  }
+}

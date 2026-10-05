@@ -1,0 +1,275 @@
+<main>
+  <style>
+    .research-note{margin-top:20px;color:var(--muted)}
+    .series-a{color:var(--cobalt)}.series-b{color:var(--coral)}
+    .observed-grid{margin-top:28px;display:grid;gap:32px}
+    .observed-panel{margin:0}.observed-panel h3{margin-bottom:12px}
+    .observed-panel .outcome{font-size:16px;line-height:28px;color:var(--muted);margin-top:12px}
+    .raw-row{margin-top:16px}.raw-label{display:flex;justify-content:space-between;gap:10px;align-items:baseline;font-size:16px;line-height:28px}
+    .raw-label .rate{font:26px/32px var(--num);white-space:nowrap}
+    .raw-label .count{font-family:var(--num);white-space:nowrap}
+    .evidence-track{height:9px;background:var(--surface);margin-top:8px;position:relative}
+    .evidence-bar{height:100%;background:currentColor;width:var(--rate)}
+    .evidence-axis{display:flex;justify-content:space-between;color:var(--muted);font:14px/24px var(--num);margin-top:8px}
+    .mix-row{margin-top:28px}.mix-header{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline;font-size:16px;line-height:28px}
+    .mix-header strong{font-size:20px}.mix-header span{color:var(--muted)}
+    .mix-strip{height:28px;display:flex;margin:12px 0;border:1px solid currentColor}
+    .mix-easy{background:currentColor}.mix-hard{background:repeating-linear-gradient(135deg,transparent,transparent 5px,currentColor 5px,currentColor 6px)}
+    .mix-labels{display:flex;justify-content:space-between;gap:12px;font-size:16px;line-height:28px;color:var(--ink)}
+    .mix-labels span{max-width:50%}.mix-labels span:last-child{text-align:right}
+    .equation{margin-top:12px;display:flex;gap:4px 10px;flex-wrap:wrap;font-size:18px;line-height:32px;color:var(--ink)}
+    .term{white-space:nowrap}.equation strong{font-family:var(--num);font-size:24px}
+    .figure-label{font-size:14px;line-height:24px;color:var(--muted);margin-bottom:10px}
+    .scenario-control{margin-top:24px;padding:20px 0;border-block:1px solid var(--line)}
+    .weight-label{display:flex;justify-content:space-between;gap:12px;align-items:baseline;font-size:20px;line-height:34px}
+    .weight-label output{font:30px/38px var(--num)}
+    #easy-share{display:block;width:100%;height:36px;accent-color:var(--cobalt);margin:12px 0 4px}
+    #easy-share:focus-visible{outline:2px solid var(--cobalt);outline-offset:4px}
+    .range-ends{display:flex;justify-content:space-between;gap:16px;font-size:14px;line-height:24px;color:var(--muted)}
+    .weight-pair{margin-top:12px;font-size:16px;line-height:28px}
+    .snapshot{margin-top:24px}.snapshot svg{display:block;width:100%;height:auto}
+    .hn-tools{margin-bottom:12px}.hn-tools button{flex:0 1 auto}
+    .formula-block{margin-top:24px;border-top:1px solid var(--line);padding-top:20px}
+    .formula-block p+p{margin-top:12px}.formula-caption{font-size:16px;line-height:28px;color:var(--muted);margin-top:8px}
+    .formula-value{font-family:var(--num);font-size:24px}
+    .proof{margin-top:24px;padding-left:18px;border-left:2px solid var(--line)}
+    .proof p+p{margin-top:12px}
+    .method-steps{padding-left:1.25em;margin-top:20px}.method-steps li+li{margin-top:14px}
+    .notice{font-size:var(--body-size);line-height:var(--body-line);margin-top:24px}
+    .noscript{padding:16px;border:1px solid var(--line)}
+    @media(max-width:600px){.raw-label{font-size:16px}.equation{font-size:17px}.hn-tools button{max-width:100%}.weight-label{font-size:19px}.observed-grid{gap:28px}}
+    @media print{.scenario-control input,.range-ends{display:none}.scenario-control{padding:10pt 0}.raw-row,.mix-row{break-inside:avoid}.proof p,.notice{font-size:11pt;line-height:1.65}}
+  </style>
+  <header class="hero">
+    <p class="eyebrow"><span>合成数据 · 虚构演示</span><span>AI 方案比较</span></p>
+    <h1>成功率高，<br>可能只是题更简单</h1>
+    <section class="summary" aria-label="核心判断">
+      <p class="conclusion">汇总看，方案 B 更高；同类任务内，方案 A 都高 <span class="number">10</span> 个百分点。统一任务比例后，A 在任意共同结构下都保持这项差距。</p>
+    </section>
+    <p class="research-note">以下数字只用于解释统计关系，不代表真实产品表现。“保持差距”是固定分组成功率下的计算结论。</p>
+  </header>
+
+  <section class="part" aria-labelledby="observed-title">
+    <p class="section-label">01 / 原始样本</p>
+    <h2 id="observed-title">同一批数字，两种排序</h2>
+    <p class="section-intro">先把成功次数和任务总数放在一起看。所有横条共用 0%–100% 尺度；分母写在方案旁，避免把不同任务量当成相同证据。</p>
+    <div class="observed-grid">
+      <figure class="observed-panel" aria-labelledby="all-title">
+        <h3 id="all-title">汇总：B 更高</h3>
+        <div class="raw-row series-a"><div class="raw-label"><span>方案 A · <span class="count">93 / 150</span></span><span class="rate">62.00%</span></div><div class="evidence-track" aria-hidden="true"><div class="evidence-bar" style="--rate:62%"></div></div></div>
+        <div class="raw-row series-b"><div class="raw-label"><span>方案 B · <span class="count">161 / 210</span></span><span class="rate">76.67%</span></div><div class="evidence-track" aria-hidden="true"><div class="evidence-bar" style="--rate:76.6666666667%"></div></div></div>
+        <div class="evidence-axis" aria-hidden="true"><span>0%</span><span>50%</span><span>100%</span></div>
+        <figcaption class="outcome">B 比 A 高 <span class="number">14.67</span> 个百分点。但两者任务构成不同。</figcaption>
+      </figure>
+      <figure class="observed-panel" aria-labelledby="easy-title">
+        <h3 id="easy-title">简单任务：A 更高</h3>
+        <div class="raw-row series-a"><div class="raw-label"><span>方案 A · <span class="count">81 / 90</span></span><span class="rate">90.00%</span></div><div class="evidence-track" aria-hidden="true"><div class="evidence-bar" style="--rate:90%"></div></div></div>
+        <div class="raw-row series-b"><div class="raw-label"><span>方案 B · <span class="count">160 / 200</span></span><span class="rate">80.00%</span></div><div class="evidence-track" aria-hidden="true"><div class="evidence-bar" style="--rate:80%"></div></div></div>
+        <div class="evidence-axis" aria-hidden="true"><span>0%</span><span>50%</span><span>100%</span></div>
+        <figcaption class="outcome">A 比 B 高 <span class="number">10.00</span> 个百分点。</figcaption>
+      </figure>
+      <figure class="observed-panel" aria-labelledby="hard-title">
+        <h3 id="hard-title">困难任务：A 更高</h3>
+        <div class="raw-row series-a"><div class="raw-label"><span>方案 A · <span class="count">12 / 60</span></span><span class="rate">20.00%</span></div><div class="evidence-track" aria-hidden="true"><div class="evidence-bar" style="--rate:20%"></div></div></div>
+        <div class="raw-row series-b"><div class="raw-label"><span>方案 B · <span class="count">1 / 10</span></span><span class="rate">10.00%</span></div><div class="evidence-track" aria-hidden="true"><div class="evidence-bar" style="--rate:10%"></div></div></div>
+        <div class="evidence-axis" aria-hidden="true"><span>0%</span><span>50%</span><span>100%</span></div>
+        <figcaption class="outcome">A 比 B 高 <span class="number">10.00</span> 个百分点。B 的困难组只有 10 次任务。</figcaption>
+      </figure>
+    </div>
+    <p class="caption" style="margin-top:24px">来源：本题提供的合成计数。格式为成功次数 / 总次数。汇总分子与分母分别相加；显示值四舍五入至两位小数，不代表估计精度。</p>
+  </section>
+
+  <section class="part" aria-labelledby="mechanism-title">
+    <p class="section-label">02 / 算术机制</p>
+    <h2 id="mechanism-title">汇总时，其实在考不同的试卷</h2>
+    <p class="section-intro">简单任务的成功率对两方案都更高。B 的样本几乎全是简单任务；A 有四成困难任务。因此，汇总成功率同时反映了分组表现和任务结构。</p>
+    <figure aria-labelledby="mix-title" style="margin-top:28px">
+      <h3 id="mix-title">任务比例决定每组获得多大权重</h3>
+      <p class="figure-label" style="margin-top:12px">实色 = 简单任务；斜线 = 困难任务。每条合计 100%。</p>
+      <div class="mix-row series-a">
+        <div class="mix-header"><strong>方案 A</strong><span>共 150 次任务</span></div>
+        <div class="mix-strip" aria-hidden="true"><div class="mix-easy" style="width:60%"></div><div class="mix-hard" style="width:40%"></div></div>
+        <div class="mix-labels"><span>简单 <span class="number">60.00%</span><br><span class="number">90 / 150</span></span><span>困难 <span class="number">40.00%</span><br><span class="number">60 / 150</span></span></div>
+        <p class="equation"><span class="term">60% × 90%</span><span>+</span><span class="term">40% × 20%</span><span>=</span><strong>62.00%</strong></p>
+      </div>
+      <div class="mix-row series-b">
+        <div class="mix-header"><strong>方案 B</strong><span>共 210 次任务</span></div>
+        <div class="mix-strip" aria-hidden="true"><div class="mix-easy" style="width:95.2380952381%"></div><div class="mix-hard" style="width:4.7619047619%"></div></div>
+        <div class="mix-labels"><span>简单 <span class="number">95.24%</span><br><span class="number">200 / 210</span></span><span>困难 <span class="number">4.76%</span><br><span class="number">10 / 210</span></span></div>
+        <p class="equation"><span class="term">(200 / 210) × 80%</span><span>+</span><span class="term">(10 / 210) × 10%</span><span>≈</span><strong>76.67%</strong></p>
+      </div>
+      <figcaption class="caption">权重 = 该类任务数 / 方案总任务数。计算使用原始分数；图中占比为显示用的四舍五入。</figcaption>
+    </figure>
+    <div class="prose"><p>这类“分组排序与汇总排序相反”的现象称为<strong>辛普森悖论</strong>。本例的反转可以用不同权重完全解释，但这些计数没有告诉我们任务如何分配，也没有证明哪一方案具有因果优势。</p></div>
+  </section>
+
+  <section class="part" aria-labelledby="scenario-title">
+    <p class="section-label">03 / 共同任务情景</p>
+    <h2 id="scenario-title">换成同一张试卷，结果如何？</h2>
+    <p class="section-intro">改变简单任务占比，让两个方案使用完全相同的权重。各组成功率固定为样本点估计：A 为 90% / 20%，B 为 80% / 10%（简单 / 困难）。</p>
+    <p class="notice"><strong>这是加权平均的情景计算，不是新实测、未来预测或因果证明。</strong>默认 50% 只是演示起点，不代表推荐的任务结构。</p>
+    <figure class="hn-figure" aria-labelledby="scenario-figure-title">
+      <h3 id="scenario-figure-title">共同权重下的成功率</h3>
+      <div class="scenario-control">
+        <label class="weight-label" for="easy-share"><span>简单任务占比</span><output id="share-output" for="easy-share">50%</output></label>
+        <input id="easy-share" type="range" min="0" max="100" step="1" value="50" aria-describedby="range-help current-weights">
+        <div class="range-ends" id="range-help"><span>0% · 全部困难</span><span>100% · 全部简单</span></div>
+        <p class="weight-pair" id="current-weights">当前两方案均使用：简单 50% · 困难 50%。</p>
+      </div>
+      <div class="snapshot hn-figure-frame"><svg id="scenario-svg" role="img" aria-labelledby="snapshot-title snapshot-desc" viewBox="0 0 720 445"></svg></div>
+      <p class="hn-insight" id="scenario-insight" aria-live="polite">简单、困难各占 50% 时，A 为 55.00%，B 为 45.00%；A 高 10.00 个百分点。</p>
+      <div class="hn-tools" aria-label="情景操作">
+        <button type="button" id="reset-scenario">重置为 50%</button>
+        <button type="button" id="export-scenario">下载当前情景 SVG</button>
+      </div>
+      <p class="hn-export-status" id="operation-status" role="status" aria-live="polite">SVG 保存当前场景的静态图，不含滑块交互。</p>
+      <figcaption class="caption">导出图包含当前权重、固定分组成功率、结果和解释边界。中文字体依赖本机可用字体；页面保留开放字体许可。</figcaption>
+    </figure>
+    <div class="formula-block">
+      <h3>当前数字怎么算出来？</h3>
+      <p class="formula-caption">每个方案：简单占比 × 简单成功率 + 困难占比 × 困难成功率。</p>
+      <p class="equation series-a"><span>方案 A：</span><span class="term" id="formula-a-easy">50% × 90%</span><span>+</span><span class="term" id="formula-a-hard">50% × 20%</span><span>=</span><strong id="formula-a-result">55.00%</strong></p>
+      <p class="equation series-b"><span>方案 B：</span><span class="term" id="formula-b-easy">50% × 80%</span><span>+</span><span class="term" id="formula-b-hard">50% × 10%</span><span>=</span><strong id="formula-b-result">45.00%</strong></p>
+      <p id="contribution-note">A 的简单、困难任务分别贡献 45.00 和 10.00 个百分点；B 分别贡献 40.00 和 5.00 个百分点。</p>
+    </div>
+    <div class="proof">
+      <h3>为什么移动滑块，差距不变？</h3>
+      <p style="margin-top:12px">A 在简单和困难任务中，都比 B 高 10 个百分点。同一套权重对两个相同差距加权，结果仍是 10 个百分点。</p>
+      <p class="equation"><span class="term">w × 10</span><span>+</span><span class="term">(1 − w) × 10</span><span>=</span><strong>10 个百分点</strong></p>
+      <p class="caption">w 为简单任务占比，取值 0–1。此结论依赖本例两组差距恰好相同；其他数据下，差距大小可能随共同权重变化。</p>
+    </div>
+  </section>
+
+  <section class="part" aria-labelledby="decision-title">
+    <p class="section-label">04 / 如何做比较</p>
+    <h2 id="decision-title">先确定比较对象，再读成功率</h2>
+    <ol class="method-steps">
+      <li><strong>描述这批样本：</strong>可以报告 B 的原始汇总成功率更高，同时公开不同的任务构成。</li>
+      <li><strong>比较同一任务结构：</strong>先按实际关心的任务占比约定共同权重，再报告分组与加权结果。不要为追求某个排序挑权重。</li>
+      <li><strong>判断真实性能：</strong>还需可比的任务定义、评分规则和采样方式；评估样本不确定性。B 的困难组仅 10 次任务，不能把 10% 当成已知真值。</li>
+    </ol>
+    <p class="notice">本页未计算统计显著性或置信区间，没有误差条。相同任务大类不自动保证组内任务完全可比；重加权也不能消除所有潜在差异。</p>
+  </section>
+  <footer class="article-footer">材料来源：本题提供的合成演示数据。成功率均为成功次数除以总次数；所有情景固定四个分组样本点估计。无真实产品评价，无外部数据。</footer>
+  <noscript><p class="noscript">当前浏览器停用了 JavaScript。原始数据与机制解释仍可阅读；调节共同任务权重与 SVG 下载需要启用 JavaScript。</p></noscript>
+</main>
+<script id="success-model">
+(function (global) {
+  'use strict';
+  const DATA = Object.freeze({
+    A: Object.freeze({easy: Object.freeze({success:81,total:90}), hard: Object.freeze({success:12,total:60})}),
+    B: Object.freeze({easy: Object.freeze({success:160,total:200}), hard: Object.freeze({success:1,total:10})})
+  });
+  function evaluate(input) {
+    const w = input && input.easyShare;
+    if (typeof w !== 'number' || !Number.isFinite(w) || w < 0 || w > 1) {
+      return {ok:false, error:'easyShare 必须是 0–1 之间的有限数值。'};
+    }
+    const schemes = {};
+    for (const id of ['A','B']) {
+      const d=DATA[id], easyRate=d.easy.success/d.easy.total, hardRate=d.hard.success/d.hard.total;
+      const success=d.easy.success+d.hard.success, total=d.easy.total+d.hard.total;
+      const easyContribution=w*easyRate, hardContribution=(1-w)*hardRate;
+      schemes[id]={
+        original:{easy:{...d.easy,rate:easyRate},hard:{...d.hard,rate:hardRate},success,total,rate:success/total,easyShare:d.easy.total/total,hardShare:d.hard.total/total},
+        scenario:{easyRate,hardRate,easyContribution,hardContribution,rate:easyContribution+hardContribution}
+      };
+    }
+    const gap=schemes.A.scenario.rate-schemes.B.scenario.rate;
+    return {ok:true,input:{easyShare:w},weights:{easy:w,hard:1-w},schemes,gap,gapPercentagePoints:gap*100,
+      leader:gap>1e-12?'A':gap < -1e-12?'B':'tie',
+      originalGapPercentagePoints:(schemes.A.original.rate-schemes.B.original.rate)*100,
+      interpretation:'固定分组样本点估计的共同权重情景；非新实测、预测或因果证明。'};
+  }
+  global.AISuccessStudy=Object.freeze({evaluate});
+})(window);
+</script>
+<script id="success-view">
+(function () {
+  'use strict';
+  const control=document.getElementById('easy-share');
+  const svg=document.getElementById('scenario-svg');
+  const status=document.getElementById('operation-status');
+  const NS='http://www.w3.org/2000/svg';
+  const COLORS={A:'#244AC7',B:'#C45C46',ink:'#282623',muted:'#68635D',line:'#D7D0C6',surface:'#EFECE6'};
+  let state={easyShare:0.5};
+  const pct=v=>(v*100).toFixed(2)+'%';
+  const weight=v=>String(Math.round(v*100))+'%';
+  function add(tag,attrs,text,parent=svg){
+    const n=document.createElementNS(NS,tag);
+    for(const [k,v] of Object.entries(attrs||{}))n.setAttribute(k,String(v));
+    if(text!==undefined)n.textContent=text;
+    parent.appendChild(n);return n;
+  }
+  function txt(x,y,text,size=16,fill=COLORS.ink,anchor='start',extra={}){
+    return add('text',{x,y,'font-size':size,'text-anchor':anchor,style:'fill:'+fill,...extra},text);
+  }
+  function drawSnapshot(result){
+    const width=Math.max(240,Math.round(svg.parentElement.clientWidth));
+    const narrow=width<620;
+    const height=narrow?495:445;
+    const left=8,right=width-8,plotWidth=right-left;
+    svg.replaceChildren();svg.setAttribute('viewBox','0 0 '+width+' '+height);
+    add('title',{id:'snapshot-title'},'共同任务结构：简单 '+weight(result.weights.easy)+'，困难 '+weight(result.weights.hard));
+    add('desc',{id:'snapshot-desc'},'合成演示。方案A成功率'+pct(result.schemes.A.scenario.rate)+'，方案B'+pct(result.schemes.B.scenario.rate)+'。A高'+result.gapPercentagePoints.toFixed(2)+'个百分点。固定分组样本点估计的加权情景，不是新实测或因果证明。');
+    txt(left,26,'共同任务结构下的成功率',narrow?19:24);
+    txt(left,55,'简单 '+weight(result.weights.easy)+' · 困难 '+weight(result.weights.hard),16);
+    txt(left,80,'两方案使用同一任务比例',14,COLORS.muted);
+    ['A','B'].forEach((id,i)=>{
+      const y=120+i*87;const s=result.schemes[id].scenario;
+      txt(left,y,'方案 '+id,18,COLORS[id]);
+      txt(right,y,pct(s.rate),26,COLORS[id],'end',{'font-family':'Georgia,Lora,serif'});
+      add('rect',{x:left,y:y+12,width:plotWidth,height:12,fill:COLORS.surface});
+      add('rect',{x:left,y:y+12,width:plotWidth*s.rate,height:12,fill:COLORS[id]});
+    });
+    [0,0.5,1].forEach(t=>txt(left+plotWidth*t,264,String(t*100)+'%',14,COLORS.muted,t===0?'start':t===1?'end':'middle',{'font-family':'Georgia,Lora,serif'}));
+    txt(left,300,'A 高 '+result.gapPercentagePoints.toFixed(2)+' 个百分点',20);
+    if(narrow){
+      txt(left,331,'w = 简单占比 = '+weight(result.weights.easy),14,COLORS.muted);
+      txt(left,356,'A = w×90% + (1−w)×20%',14);
+      txt(left,381,'B = w×80% + (1−w)×10%',14);
+      txt(left,415,'固定分组样本点估计',14,COLORS.muted);
+      txt(left,440,'合成演示 · 加权情景',14,COLORS.muted);
+      txt(left,465,'非新实测、预测或因果证明',14,COLORS.muted);
+      txt(left,489,'来源：本题合成数据',14,COLORS.muted);
+    }else{
+      txt(left,332,'w = 简单占比 = '+weight(result.weights.easy)+'；分组样本点估计固定',14,COLORS.muted);
+      txt(left,360,'A = w×90% + (1−w)×20%    B = w×80% + (1−w)×10%',14);
+      txt(left,394,'合成演示 · 加权情景 · 非新实测、预测或因果证明',14,COLORS.muted);
+      txt(left,422,'来源：本题合成数据。横条范围 0%–100%；没有误差区间。',14,COLORS.muted);
+    }
+  }
+  function render(input,result){
+    if(!result.ok){status.textContent=result.error;return;}
+    control.value=String(input.easyShare*100);
+    document.getElementById('share-output').textContent=weight(result.weights.easy);
+    control.setAttribute('aria-valuetext','简单任务 '+weight(result.weights.easy)+'，困难任务 '+weight(result.weights.hard));
+    document.getElementById('current-weights').textContent='当前两方案均使用：简单 '+weight(result.weights.easy)+' · 困难 '+weight(result.weights.hard)+'。';
+    const A=result.schemes.A.scenario,B=result.schemes.B.scenario;
+    document.getElementById('scenario-insight').textContent='简单占 '+weight(result.weights.easy)+'、困难占 '+weight(result.weights.hard)+' 时，A 为 '+pct(A.rate)+'，B 为 '+pct(B.rate)+'；A 高 '+result.gapPercentagePoints.toFixed(2)+' 个百分点。';
+    for(const id of ['A','B']){
+      const key=id.toLowerCase(),s=result.schemes[id].scenario;
+      document.getElementById('formula-'+key+'-easy').textContent=weight(result.weights.easy)+' × '+Math.round(s.easyRate*100)+'%';
+      document.getElementById('formula-'+key+'-hard').textContent=weight(result.weights.hard)+' × '+Math.round(s.hardRate*100)+'%';
+      document.getElementById('formula-'+key+'-result').textContent=pct(s.rate);
+    }
+    document.getElementById('contribution-note').textContent='A 的简单、困难任务分别贡献 '+(A.easyContribution*100).toFixed(2)+' 和 '+(A.hardContribution*100).toFixed(2)+' 个百分点；B 分别贡献 '+(B.easyContribution*100).toFixed(2)+' 和 '+(B.hardContribution*100).toFixed(2)+' 个百分点。';
+    drawSnapshot(result);
+  }
+  function update(patch){state={...state,...patch};render(state,window.AISuccessStudy.evaluate(state));}
+  control.addEventListener('input',()=>{update({easyShare:Number(control.value)/100});status.textContent='情景已更新。下载将保存当前 '+weight(state.easyShare)+' 简单任务占比的图。';});
+  document.getElementById('reset-scenario').addEventListener('click',()=>{update({easyShare:0.5});status.textContent='已重置：简单 50%，困难 50%；A 55.00%，B 45.00%。';});
+  document.getElementById('export-scenario').addEventListener('click',async function(){
+    this.disabled=true;control.disabled=true;document.getElementById('reset-scenario').disabled=true;status.textContent='正在准备当前情景 SVG…';
+    try{
+      const currentShare=state.easyShare;
+      const exportResult=await window.HNFigure.exportSVG(svg,'共同任务情景-简单'+Math.round(currentShare*100)+'pct.svg');
+      status.textContent='已发起下载：'+exportResult.filename+'。请在浏览器下载列表确认保存；SVG 为静态快照。';
+    }catch(error){status.textContent='未能导出 SVG：'+error.message+'。当前页面仍可继续使用。';}
+    finally{this.disabled=false;control.disabled=false;document.getElementById('reset-scenario').disabled=false;}
+  });
+  if(window.ResizeObserver){new ResizeObserver(()=>drawSnapshot(window.AISuccessStudy.evaluate(state))).observe(svg.parentElement);}
+  else{window.addEventListener('resize',()=>drawSnapshot(window.AISuccessStudy.evaluate(state)));}
+  update({easyShare:0.5});
+})();
+</script>
