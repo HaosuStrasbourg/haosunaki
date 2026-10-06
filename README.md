@@ -23,6 +23,8 @@ HaosuNaki 是一套给 AI 使用的 UI 与视觉呈现 skill。它保留原稿�
 
 ## 怎么用
 
+![从初稿到呈现：放入初稿、HaosuNaki 排版配图、复核成稿、导出发布；排版与配图包括识别内容类型、判断配图需要、安排图文位置、建立视觉层级、统一风格和检查成品，保留原文与顺序](docs/images/workflow-illustrated-c.png)
+
 在支持 skill 的助手中启用 HaosuNaki，然后给出初稿：
 
 ```text
