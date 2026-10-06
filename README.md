@@ -50,6 +50,8 @@ HaosuNaki 是一套给 AI 使用的 UI 与视觉呈现 skill。它保留原稿�
 
 [阅读版 HTML](docs/manual.html) · [图形演示 HTML](examples/demo.html)：下载后用浏览器打开，GitHub 文件页不执行交互。
 
+附录：[设计 tokens：常用参数与替换方式](docs/2026-10-06%20-%20使用说明.md#附录-设计-tokens)。
+
 ## v1.0.0 核心能力
 
 提供方法规范、[设计参数](assets/design-tokens.json)、离线 HTML 构建，以及条形图、折线图、基础机制图三个 SVG 生成器。[67 项官方参考索引](references/2026-10-04%20-%20已确认图族与复用索引.md)用于选型，不代表 67 个通用生成器。

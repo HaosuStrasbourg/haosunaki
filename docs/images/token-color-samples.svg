@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="380" viewBox="0 0 840 380" role="img" aria-labelledby="title desc">
+<title id="title">HaosuNaki 分类候选与量值色阶</title>
+<desc id="desc">分类六色，蓝色顺序五阶，蓝白珊瑚发散五阶。仅为配色参考；应用时优先保证业务含义与区分度。</desc>
+<rect width="840" height="380" fill="#FAF8F4"/>
+<style>text{fill:#282623;font-family:"IBM Plex Mono","PingFang SC",sans-serif}.label{font-size:19px}.small{font-size:13px}</style>
+<text class="label" x="28" y="30">分类候选 · 颜色对应稳定对象</text>
+<rect data-token="category.cobalt" x="28.00" y="45" width="122.33" height="36" rx="3" fill="#244AC7" stroke="#D7D0C6" stroke-width="0.5"/>
+<text class="small" x="28.00" y="102">钴蓝 #244AC7</text>
+<rect data-token="category.coral" x="160.33" y="45" width="122.33" height="36" rx="3" fill="#C45C46" stroke="#D7D0C6" stroke-width="0.5"/>
+<text class="small" x="160.33" y="102">陶珊瑚 #C45C46</text>
+<rect data-token="category.berry" x="292.67" y="45" width="122.33" height="36" rx="3" fill="#A33C62" stroke="#D7D0C6" stroke-width="0.5"/>
+<text class="small" x="292.67" y="102">莓红 #A33C62</text>
+<rect data-token="category.lake" x="425.00" y="45" width="122.33" height="36" rx="3" fill="#2E7F9E" stroke="#D7D0C6" stroke-width="0.5"/>
+<text class="small" x="425.00" y="102">湖蓝 #2E7F9E</text>
+<rect data-token="category.lavender" x="557.33" y="45" width="122.33" height="36" rx="3" fill="#7668A6" stroke="#D7D0C6" stroke-width="0.5"/>
+<text class="small" x="557.33" y="102">藤紫 #7668A6</text>
+<rect data-token="category.tea" x="689.67" y="45" width="122.33" height="36" rx="3" fill="#765B50" stroke="#D7D0C6" stroke-width="0.5"/>
+<text class="small" x="689.67" y="102">深茶 #765B50</text>
+<text class="label" x="28" y="146">顺序色阶 · 低 → 高</text>
+<rect data-token="scale.sequential.1" x="28.00" y="161" width="148.80" height="36" rx="3" fill="#EDF1FC" stroke="#D7D0C6" stroke-width="0.5"/>
+<text class="small" x="28.00" y="218">#EDF1FC</text>
+<rect data-token="scale.sequential.2" x="186.80" y="161" width="148.80" height="36" rx="3" fill="#C3CFF3" stroke="#D7D0C6" stroke-width="0.5"/>
+<text class="small" x="186.80" y="218">#C3CFF3</text>
+<rect data-token="scale.sequential.3" x="345.60" y="161" width="148.80" height="36" rx="3" fill="#91A6E6" stroke="#D7D0C6" stroke-width="0.5"/>
+<text class="small" x="345.60" y="218">#91A6E6</text>
+<rect data-token="scale.sequential.4" x="504.40" y="161" width="148.80" height="36" rx="3" fill="#5678D6" stroke="#D7D0C6" stroke-width="0.5"/>
+<text class="small" x="504.40" y="218">#5678D6</text>
+<rect data-token="scale.sequential.5" x="663.20" y="161" width="148.80" height="36" rx="3" fill="#244AC7" stroke="#D7D0C6" stroke-width="0.5"/>
+<text class="small" x="663.20" y="218">#244AC7</text>
+<text class="label" x="28" y="262">发散色阶 · 负 → 真实零 → 正</text>
+<rect data-token="scale.diverging.1" x="28.00" y="277" width="148.80" height="36" rx="3" fill="#244AC7" stroke="#D7D0C6" stroke-width="0.5"/>
+<text class="small" x="28.00" y="334">#244AC7</text>
+<rect data-token="scale.diverging.2" x="186.80" y="277" width="148.80" height="36" rx="3" fill="#91A6E6" stroke="#D7D0C6" stroke-width="0.5"/>
+<text class="small" x="186.80" y="334">#91A6E6</text>
+<rect data-token="scale.diverging.3" x="345.60" y="277" width="148.80" height="36" rx="3" fill="#FAF8F4" stroke="#D7D0C6" stroke-width="0.5"/>
+<text class="small" x="345.60" y="334">#FAF8F4</text>
+<rect data-token="scale.diverging.4" x="504.40" y="277" width="148.80" height="36" rx="3" fill="#E5AB9F" stroke="#D7D0C6" stroke-width="0.5"/>
+<text class="small" x="504.40" y="334">#E5AB9F</text>
+<rect data-token="scale.diverging.5" x="663.20" y="277" width="148.80" height="36" rx="3" fill="#C45C46" stroke="#D7D0C6" stroke-width="0.5"/>
+<text class="small" x="663.20" y="334">#C45C46</text>
+</svg>
