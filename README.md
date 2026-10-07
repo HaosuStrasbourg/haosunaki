@@ -50,7 +50,7 @@ HaosuNaki 是一套给 AI 使用的 UI 与视觉呈现 skill。它保留原稿�
 
 [阅读版 HTML](docs/manual.html) · [图形演示 HTML](examples/demo.html)：下载后用浏览器打开，GitHub 文件页不执行交互。
 
-附录：[设计 tokens：常用参数与替换方式](docs/2026-10-06%20-%20使用说明.md#附录-设计-tokens)。
+附录：[打开设计参数样本 HTML](https://haosustrasbourg.github.io/haosunaki/design-tokens.html) · [下载原页面](https://raw.githubusercontent.com/HaosuStrasbourg/haosunaki/main/docs/design-tokens.html)。沿用之前的完整样本，包含色样、字体、图表与 165 个参数。
 
 ## v1.0.0 核心能力
 
