@@ -42,13 +42,15 @@ HaosuNaki 是一套给 AI 使用的 UI 与视觉呈现 skill。它保留原稿�
 
 ## 看 demo
 
-[打开使用说明](docs/2026-10-06%20-%20使用说明.md)，看三个具体例子：
+[在线阅读使用说明](https://haosustrasbourg.github.io/haosunaki/manual.html) · [GitHub 文字版](docs/2026-10-06%20-%20使用说明.md)。先看三个具体例子：
 
 1. **数据比较**：保留数据和作者结论，只处理表格与配图。
 2. **条件流程**：判断、分支和起止怎样表达。
 3. **图文组合**：保留文章顺序，用组件和间距呈现层级。
 
-[阅读版 HTML](docs/manual.html) · [图形演示 HTML](examples/demo.html)：下载后用浏览器打开，GitHub 文件页不执行交互。
+新增[插画讲解：怎样选择视觉表达](https://haosustrasbourg.github.io/haosunaki/manual.html#visual-decisions)：内容主次、比较与强调、九类选图、条件分支。九宫格包含桑基图、旭日图和关系网络图，每种都说明适用问题与数据要求。
+
+[阅读版 HTML 文件](docs/manual.html) · [图形演示 HTML](examples/demo.html)：下载后用浏览器打开，GitHub 文件页不执行交互。
 
 附录：[打开设计参数样本 HTML](https://haosustrasbourg.github.io/haosunaki/design-tokens.html) · [下载 HTML](https://raw.githubusercontent.com/HaosuStrasbourg/haosunaki/main/docs/design-tokens.html)。沿用之前的完整样本，包含色样、字体、图表与 165 个参数。
 
